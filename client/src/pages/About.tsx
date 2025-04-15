@@ -1,0 +1,244 @@
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Award, Clock, Settings, Shield, Users } from "lucide-react";
+
+const About = () => {
+  return (
+    <>
+      {/* About Header */}
+      <section className="bg-primary text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl">
+            <span className="inline-block px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm font-medium mb-3">ABOUT US</span>
+            <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+              Our Journey Since 2022
+            </h1>
+            <p className="text-xl opacity-90">
+              Get to know Sai Vinayaka - your trusted partner for heavy equipment erection services.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Story */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="font-heading text-3xl font-bold mb-6 text-neutral-800">Our Story</h2>
+              <p className="text-neutral-600 mb-4">
+                Founded in 2022, Sai Vinayaka emerged from a vision to bridge the gap in professional heavy equipment installation services across industries. Our founder, with over 15 years of experience in industrial equipment setup, recognized the need for a specialized service provider focused exclusively on equipment erection.
+              </p>
+              <p className="text-neutral-600 mb-4">
+                Starting with a small team of technical experts, we have grown steadily by delivering exceptional service quality and building strong client relationships. Today, we serve diverse industries including manufacturing, healthcare, pharmaceuticals, and more.
+              </p>
+              <p className="text-neutral-600 mb-4">
+                Our commitment to technical excellence, safety standards, and client satisfaction has established us as a trusted name in the equipment installation sector in just a short time.
+              </p>
+            </div>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1581092921461-39b51a3bf913?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
+                alt="Company history" 
+                className="rounded-lg shadow-lg"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-accent text-white p-4 rounded-lg shadow-lg">
+                <p className="font-heading font-bold text-xl">Established 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-16 bg-neutral-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral-800 mb-4">Our Mission & Vision</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="w-16 h-16 bg-primary-light bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg className="h-8 w-8 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
+                  <path d="M8 12L11 15L16 10"/>
+                </svg>
+              </div>
+              <h3 className="font-heading text-2xl font-bold mb-4 text-center">Our Mission</h3>
+              <p className="text-neutral-600 text-center">
+                To provide industries with exceptional equipment erection services that maximize operational efficiency, ensure safety, and minimize downtime. We aim to be the most reliable partner for our clients through technical excellence and personalized service.
+              </p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="w-16 h-16 bg-primary-light bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg className="h-8 w-8 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 12C2 6.5 6.5 2 12 2C17.5 2 22 6.5 22 12"/>
+                  <path d="M12 22V12M12 12L16 16M12 12L8 16"/>
+                </svg>
+              </div>
+              <h3 className="font-heading text-2xl font-bold mb-4 text-center">Our Vision</h3>
+              <p className="text-neutral-600 text-center">
+                To become the leading equipment erection service provider nationally, setting new industry standards for quality, safety, and customer satisfaction. We envision building long-term partnerships with our clients as their trusted advisor for all equipment installation needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral-800 mb-4">Our Core Values</h2>
+            <p className="max-w-2xl mx-auto text-neutral-600">
+              These principles guide everything we do at Sai Vinayaka
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm">
+              <div className="w-14 h-14 bg-primary-light bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <Shield className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-heading text-xl font-bold mb-2">Safety First</h3>
+              <p className="text-neutral-600">
+                We prioritize the safety of our team, clients, and equipment above all else, adhering to the highest safety standards.
+              </p>
+            </div>
+            
+            <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm">
+              <div className="w-14 h-14 bg-primary-light bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <Award className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-heading text-xl font-bold mb-2">Excellence</h3>
+              <p className="text-neutral-600">
+                We strive for excellence in every project, delivering the highest quality work that meets or exceeds expectations.
+              </p>
+            </div>
+            
+            <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm">
+              <div className="w-14 h-14 bg-primary-light bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-heading text-xl font-bold mb-2">Client-Focused</h3>
+              <p className="text-neutral-600">
+                We put our clients at the center of everything we do, tailoring our solutions to their specific needs.
+              </p>
+            </div>
+            
+            <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm">
+              <div className="w-14 h-14 bg-primary-light bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <Settings className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-heading text-xl font-bold mb-2">Technical Expertise</h3>
+              <p className="text-neutral-600">
+                We continuously develop our technical knowledge to provide the most effective solutions for complex installations.
+              </p>
+            </div>
+            
+            <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm">
+              <div className="w-14 h-14 bg-primary-light bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <Clock className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-heading text-xl font-bold mb-2">Timeliness</h3>
+              <p className="text-neutral-600">
+                We respect our clients' time by adhering to project schedules and completing installations on or before deadlines.
+              </p>
+            </div>
+            
+            <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm">
+              <div className="w-14 h-14 bg-primary-light bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <svg className="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 10v12"/>
+                  <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/>
+                </svg>
+              </div>
+              <h3 className="font-heading text-xl font-bold mb-2">Integrity</h3>
+              <p className="text-neutral-600">
+                We conduct our business with honesty, transparency, and ethical standards, building trust with every interaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-16 bg-neutral-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral-800 mb-4">Our Expert Team</h2>
+            <p className="max-w-2xl mx-auto text-neutral-600">
+              Meet the skilled professionals who make up Sai Vinayaka
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
+                alt="Team member" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-6">
+                <h3 className="font-heading text-xl font-bold mb-1">Rajiv Mehta</h3>
+                <p className="text-accent font-medium mb-4">Founder & Technical Director</p>
+                <p className="text-neutral-600">
+                  With over 15 years of experience in industrial equipment installation across various industries.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
+                alt="Team member" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-6">
+                <h3 className="font-heading text-xl font-bold mb-1">Anita Patel</h3>
+                <p className="text-accent font-medium mb-4">Operations Manager</p>
+                <p className="text-neutral-600">
+                  Specializes in project management and ensuring smooth workflow for all installation projects.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="https://images.unsplash.com/photo-1563237023-b1e970526dcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
+                alt="Team member" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-6">
+                <h3 className="font-heading text-xl font-bold mb-1">Vikram Singh</h3>
+                <p className="text-accent font-medium mb-4">Lead Technical Engineer</p>
+                <p className="text-neutral-600">
+                  Expert in complex equipment installation with particular focus on precision machinery.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-primary text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-heading text-3xl font-bold mb-6">Work With Sai Vinayaka</h2>
+          <p className="max-w-2xl mx-auto text-lg mb-8 opacity-90">
+            Let our expert team handle your equipment installation needs with precision and care.
+          </p>
+          <Link href="/contact">
+            <Button className="bg-accent hover:bg-accent-dark text-white font-medium px-6 py-3 rounded shadow">
+              Contact Us Today
+            </Button>
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default About;
