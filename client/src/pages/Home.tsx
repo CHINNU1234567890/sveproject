@@ -16,7 +16,7 @@ const Home = () => {
         {/* Hero Image */}
         <div className="absolute inset-0 overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1624029769761-8d7e3573682a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=800&q=80" 
+            src="/assets/images/heavy-crane.jpg" 
             alt="Heavy equipment installation" 
             className="w-full h-full object-cover opacity-25"
           />
@@ -25,30 +25,65 @@ const Home = () => {
         
         {/* Hero Content */}
         <div className="container mx-auto px-4 py-24 md:py-32 lg:py-40 relative z-10">
-          <div className="max-w-3xl">
-            <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide border border-white/20 rounded-full bg-white/10 backdrop-blur-sm">
-              ESTABLISHED 2022
-            </span>
-            <h1 className="heading-xl mb-6 leading-tight">
-              <span className="text-white">Professional</span> <span className="text-accent font-extrabold">Heavy Equipment</span> <span className="text-white">Erection Services</span>
-            </h1>
-            <p className="text-xl mb-10 text-white/90 font-light max-w-2xl leading-relaxed">
-              Industrial-grade installation solutions for businesses, hospitals, manufacturers, and individual users with expertise, safety, and reliability.
-            </p>
-            <div className="flex flex-wrap gap-5">
-              <Link href="/services">
-                <Button className="btn-gradient text-lg font-medium group relative">
-                  <span className="group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center">
-                    Explore Services
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </span>
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button variant="outline" className="glass-effect text-white hover:bg-white/20 text-lg font-medium border-white/20 px-6 py-3">
-                  Contact Us
-                </Button>
-              </Link>
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="max-w-3xl lg:mr-12">
+              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide border border-white/20 rounded-full bg-white/10 backdrop-blur-sm">
+                ESTABLISHED 2022
+              </span>
+              <h1 className="heading-xl mb-6 leading-tight">
+                <span className="text-white">Professional</span> <span className="text-accent font-extrabold">Heavy Equipment</span> <span className="text-white">Erection Services</span>
+              </h1>
+              <p className="text-xl mb-10 text-white/90 font-light max-w-2xl leading-relaxed">
+                Industrial-grade installation solutions for businesses, hospitals, manufacturers, and individual users with expertise, safety, and reliability.
+              </p>
+              <div className="flex flex-wrap gap-5 mb-10 lg:mb-0">
+                <Link href="/services">
+                  <Button className="btn-gradient text-lg font-medium group relative">
+                    <span className="group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center">
+                      Explore Services
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </span>
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline" className="glass-effect text-white hover:bg-white/20 text-lg font-medium border-white/20 px-6 py-3">
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            
+            {/* Featured Equipment Card */}
+            <div className="lg:w-2/5 mt-10 lg:mt-0 transform lg:translate-y-6">
+              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/20 shadow-xl">
+                <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
+                  <img 
+                    src="/assets/images/equipment-installation.jpg"
+                    alt="Equipment installation" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-4 right-4 bg-accent/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Featured
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Industrial Equipment Setup</h3>
+                <p className="text-white/80 mb-4">
+                  Our specialized team handles the complex process of installing heavy industrial machinery with precision and safety.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">Safety First</span>
+                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">Expert Team</span>
+                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">Certified</span>
+                </div>
+                <Link href="/services#industrial">
+                  <Button className="w-full glass-effect text-white hover:bg-white/20 border-white/20">
+                    <span className="inline-flex items-center">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </span>
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -151,7 +186,7 @@ const Home = () => {
             <div className="relative">
               <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-white/10">
                 <img 
-                  src="https://images.unsplash.com/photo-1601152888061-b4c0cffd1480?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
+                  src="/assets/images/industrial-equipment.jpg" 
                   alt="Heavy equipment installation team" 
                   className="w-full h-auto"
                 />
