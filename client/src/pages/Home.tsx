@@ -62,37 +62,37 @@ const Home = () => {
       </section>
 
       {/* Service Highlights */}
-      <section className="py-16 bg-white">
+      <section className="section-padding bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 bg-primary-light bg-opacity-10 text-primary rounded-full text-sm font-medium mb-3">OUR EXPERTISE</span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral-800 mb-4">Specialized Equipment Erection Services</h2>
-            <p className="max-w-2xl mx-auto text-neutral-600">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wider mb-4">OUR EXPERTISE</span>
+            <h2 className="heading-lg gradient-text mb-4">Specialized Equipment Erection Services</h2>
+            <p className="max-w-2xl mx-auto text-gray-600 text-lg">
               We provide comprehensive solutions for installing and setting up heavy equipment across various industries.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {serviceHighlights.slice(0, 4).map((service) => (
-              <div key={service.id} className="equipment-card bg-white border border-neutral-200 rounded-lg p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="w-14 h-14 bg-primary-light bg-opacity-10 rounded-full flex items-center justify-center mb-4">
-                  {service.id === 'industrial' && <Omega className="h-6 w-6 text-primary" />}
-                  {service.id === 'medical' && <Hospital className="h-6 w-6 text-primary" />}
-                  {service.id === 'manufacturing' && <Factory className="h-6 w-6 text-primary" />}
-                  {service.id === 'individual' && <User className="h-6 w-6 text-primary" />}
+              <div key={service.id} className="modern-card p-8 group">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:shadow transform transition-all duration-300 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-primary/30 group-hover:to-accent/30">
+                  {service.id === 'industrial' && <Omega className="h-7 w-7 text-primary group-hover:text-accent transition-colors duration-300" />}
+                  {service.id === 'medical' && <Hospital className="h-7 w-7 text-primary group-hover:text-accent transition-colors duration-300" />}
+                  {service.id === 'manufacturing' && <Factory className="h-7 w-7 text-primary group-hover:text-accent transition-colors duration-300" />}
+                  {service.id === 'individual' && <User className="h-7 w-7 text-primary group-hover:text-accent transition-colors duration-300" />}
                 </div>
-                <h3 className="font-heading text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-neutral-600">{service.description}</p>
+                <h3 className="font-heading text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
           </div>
           
           <div className="mt-12 text-center">
             <Link href="/services">
-              <a className="inline-flex items-center text-primary font-medium hover:text-primary-dark">
+              <div className="inline-flex items-center text-primary font-medium hover:text-primary-dark cursor-pointer">
                 View all services
                 <ArrowRight className="ml-1 h-4 w-4" />
-              </a>
+              </div>
             </Link>
           </div>
         </div>
@@ -102,76 +102,92 @@ const Home = () => {
       <div className="angle-separator bg-primary"></div>
 
       {/* About Section */}
-      <section id="about" className="bg-primary text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section id="about" className="relative bg-gradient-to-br from-primary to-primary-dark text-white section-padding overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-pattern"></div>
+        </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-40 left-10 w-64 h-64 rounded-full bg-accent opacity-5 blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-white opacity-5 blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm font-medium mb-3">ABOUT US</span>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Delivering Excellence Since 2022</h2>
-              <p className="mb-6 text-neutral-100">
+              <span className="inline-block px-4 py-1.5 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-semibold tracking-wider mb-4">ABOUT US</span>
+              <h2 className="heading-lg text-white mb-6">Delivering Excellence Since <span className="text-accent font-bold">2022</span></h2>
+              <p className="mb-8 text-white/90 text-lg leading-relaxed">
                 Founded in 2022, Sai Vinayaka has quickly established itself as a trusted partner in heavy equipment erection services. We combine technical expertise with a commitment to safety and quality to deliver exceptional results for our clients.
               </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                  <p>Experienced team of technical professionals with industry knowledge</p>
+              <div className="space-y-5 mb-10">
+                <div className="flex items-start bg-white/5 p-4 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+                  <CheckCircle className="h-6 w-6 text-accent mr-4 flex-shrink-0" />
+                  <p className="text-white/90">Experienced team of technical professionals with industry knowledge</p>
                 </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                  <p>Strict adherence to safety protocols and industry standards</p>
+                <div className="flex items-start bg-white/5 p-4 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+                  <CheckCircle className="h-6 w-6 text-accent mr-4 flex-shrink-0" />
+                  <p className="text-white/90">Strict adherence to safety protocols and industry standards</p>
                 </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                  <p>Customized solutions based on client requirements</p>
+                <div className="flex items-start bg-white/5 p-4 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+                  <CheckCircle className="h-6 w-6 text-accent mr-4 flex-shrink-0" />
+                  <p className="text-white/90">Customized solutions based on client requirements</p>
                 </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                  <p>Timely project completion with minimum operational disruption</p>
+                <div className="flex items-start bg-white/5 p-4 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+                  <CheckCircle className="h-6 w-6 text-accent mr-4 flex-shrink-0" />
+                  <p className="text-white/90">Timely project completion with minimum operational disruption</p>
                 </div>
               </div>
               <Link href="/contact">
-                <Button variant="outline" className="inline-block bg-white text-primary hover:bg-neutral-200 px-6 py-3 rounded shadow font-medium transition duration-300">
-                  Get in Touch
+                <Button className="glass-effect hover:bg-white/20 text-white border-white/20 px-6 py-3 text-lg font-medium group">
+                  <span className="inline-flex items-center">
+                    Get in Touch 
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
               </Link>
             </div>
             
             <div className="relative">
-              <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
+              <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-white/10">
                 <img 
                   src="https://images.unsplash.com/photo-1601152888061-b4c0cffd1480?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
                   alt="Heavy equipment installation team" 
                   className="w-full h-auto"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
               </div>
-              <div className="absolute top-8 -right-8 w-48 h-48 bg-accent rounded-lg -z-0 hidden lg:block"></div>
-              <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary rounded-lg -z-0 hidden lg:block"></div>
+              <div className="absolute top-12 -right-10 w-64 h-64 bg-accent/30 rounded-2xl -z-0 hidden lg:block blur-sm"></div>
+              <div className="absolute -bottom-12 -left-10 w-64 h-64 bg-primary-dark/50 rounded-2xl -z-0 hidden lg:block blur-sm"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 bg-white">
+      <section id="projects" className="section-padding bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 bg-primary-light bg-opacity-10 text-primary rounded-full text-sm font-medium mb-3">OUR PROJECTS</span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral-800 mb-4">Featured Work</h2>
-            <p className="max-w-2xl mx-auto text-neutral-600">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wider mb-4">OUR PROJECTS</span>
+            <h2 className="heading-lg gradient-text mb-4">Featured Work</h2>
+            <p className="max-w-2xl mx-auto text-gray-600 text-lg">
               Explore our successful equipment erection projects across different industries.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {projects.slice(0, 3).map(project => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
           
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <Link href="/projects">
-              <Button className="inline-block bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded shadow transition duration-300">
-                View All Projects
+              <Button className="btn-gradient relative group px-8 py-3 text-lg">
+                <span className="inline-flex items-center">
+                  View All Projects
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
               </Button>
             </Link>
           </div>
@@ -179,12 +195,18 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-neutral-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 bg-primary-light bg-opacity-10 text-primary rounded-full text-sm font-medium mb-3">TESTIMONIALS</span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral-800 mb-4">What Our Clients Say</h2>
-            <p className="max-w-2xl mx-auto text-neutral-600">
+      <section className="section-padding bg-gray-50 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-50">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wider mb-4">TESTIMONIALS</span>
+            <h2 className="heading-lg gradient-text mb-4">What Our Clients Say</h2>
+            <p className="max-w-2xl mx-auto text-gray-600 text-lg">
               Hear from our satisfied clients about their experience working with Sai Vinayaka.
             </p>
           </div>
@@ -193,6 +215,19 @@ const Home = () => {
             {testimonials.map(testimonial => (
               <TestimonialCard key={testimonial.id} testimonial={testimonial} />
             ))}
+          </div>
+          
+          {/* Call to action */}
+          <div className="mt-20 text-center">
+            <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-primary to-primary-dark text-white shadow-xl">
+              <h3 className="text-2xl font-bold mb-4">Ready to work with us?</h3>
+              <p className="mb-6 text-white/90">Contact us today to discuss your heavy equipment installation needs.</p>
+              <Link href="/contact">
+                <Button className="glass-effect hover:bg-white/20 text-white border-white/20 px-6 py-3 text-lg font-medium">
+                  Contact Us Today
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
