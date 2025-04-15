@@ -4,8 +4,8 @@ import { Facebook, Linkedin, Instagram, Phone, Mail, MapPin, Clock, ArrowRight, 
 // Custom FooterLink component to prevent nested anchor tag issues
 const FooterLink = ({ href, label }: { href: string; label: string }) => (
   <Link href={href}>
-    <div className="cursor-pointer hover:text-accent transition-all duration-300 flex items-center group">
-      <ArrowRight className="h-3 w-0 mr-0 group-hover:w-3 group-hover:mr-1 transition-all duration-300 overflow-hidden" />
+    <div className="cursor-pointer text-white hover:text-accent transition-all duration-300 flex items-center group">
+      <ArrowRight className="h-3 w-0 mr-0 group-hover:w-3 group-hover:mr-1 transition-all duration-300 overflow-hidden text-accent" />
       <span>{label}</span>
     </div>
   </Link>
@@ -13,9 +13,9 @@ const FooterLink = ({ href, label }: { href: string; label: string }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-dark text-white pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-black text-white pt-16 pb-8 relative overflow-hidden">
       {/* Solid background to prevent transparency */}
-      <div className="absolute inset-0 bg-primary-dark"></div>
+      <div className="absolute inset-0 bg-black"></div>
       
       {/* Decorative pattern */}
       <div className="absolute inset-0 opacity-5 z-[1]">
@@ -37,7 +37,7 @@ const Footer = () => {
               </div>
               <h3 className="font-heading font-bold text-2xl">SAI VINAYAKA</h3>
             </div>
-            <p className="text-white/70 mb-6 leading-relaxed">
+            <p className="text-white mb-6 leading-relaxed">
               Professional heavy equipment erection services since 2022. Delivering excellence in installation, setup, and calibration.
             </p>
             <div className="flex space-x-3 mt-6">
@@ -134,17 +134,17 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-white/10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-white/60 mb-4 md:mb-0">
+            <p className="text-sm text-white mb-4 md:mb-0">
               &copy; {new Date().getFullYear()} Sai Vinayaka. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy">
-                <div className="cursor-pointer text-white/60 hover:text-white transition-colors duration-300">
+                <div className="cursor-pointer text-white hover:text-accent transition-colors duration-300">
                   Privacy Policy
                 </div>
               </Link>
               <Link href="/terms">
-                <div className="cursor-pointer text-white/60 hover:text-white transition-colors duration-300">
+                <div className="cursor-pointer text-white hover:text-accent transition-colors duration-300">
                   Terms of Service
                 </div>
               </Link>
