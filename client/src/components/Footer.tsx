@@ -13,15 +13,18 @@ const FooterLink = ({ href, label }: { href: string; label: string }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-primary-dark to-primary-dark/95 text-white pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-primary-dark text-white pt-16 pb-8 relative overflow-hidden">
+      {/* Solid background to prevent transparency */}
+      <div className="absolute inset-0 bg-primary-dark"></div>
+      
       {/* Decorative pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 z-[1]">
         <div className="absolute inset-0 bg-pattern"></div>
       </div>
       
       {/* Decorative blur elements */}
-      <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-accent opacity-5 blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-primary opacity-5 blur-3xl"></div>
+      <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-accent opacity-5 blur-3xl z-[1]"></div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-primary opacity-5 blur-3xl z-[1]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Footer Top Section */}
