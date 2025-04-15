@@ -1,128 +1,149 @@
 import { Link } from "wouter";
-import { Facebook, Linkedin, MessageCircle } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Phone, Mail, MapPin, Clock, ArrowRight, Wrench } from "lucide-react";
+
+// Custom FooterLink component to prevent nested anchor tag issues
+const FooterLink = ({ href, label }: { href: string; label: string }) => (
+  <Link href={href}>
+    <div className="cursor-pointer hover:text-accent transition-all duration-300 flex items-center group">
+      <ArrowRight className="h-3 w-0 mr-0 group-hover:w-3 group-hover:mr-1 transition-all duration-300 overflow-hidden" />
+      <span>{label}</span>
+    </div>
+  </Link>
+);
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-dark text-white pt-12 pb-6">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-gradient-to-b from-primary-dark to-primary-dark/95 text-white pt-16 pb-8 relative overflow-hidden">
+      {/* Decorative pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-pattern"></div>
+      </div>
+      
+      {/* Decorative blur elements */}
+      <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-accent opacity-5 blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-primary opacity-5 blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Footer Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+          {/* Company Info */}
           <div>
-            <div className="flex items-center mb-4">
-              <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto mr-3">
-                <rect width="50" height="50" rx="5" fill="white"/>
-                <path d="M10 25C10 17.268 16.268 11 24 11H40V39H24C16.268 39 10 32.732 10 25Z" fill="hsl(var(--primary))"/>
-                <path d="M18 20L32 20" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M18 25L28 25" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M18 30L32 30" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-              <h3 className="font-heading font-bold text-xl">SAI VINAYAKA</h3>
+            <div className="flex items-center mb-6">
+              <div className="h-12 w-12 rounded-lg bg-white/10 backdrop-blur-sm mr-3 flex items-center justify-center border border-white/5">
+                <Wrench className="h-6 w-6 text-accent" />
+              </div>
+              <h3 className="font-heading font-bold text-2xl">SAI VINAYAKA</h3>
             </div>
-            <p className="text-neutral-300 mb-4">
+            <p className="text-white/70 mb-6 leading-relaxed">
               Professional heavy equipment erection services since 2022. Delivering excellence in installation, setup, and calibration.
             </p>
-            <p className="flex items-center">
-              <svg className="h-5 w-5 mr-2 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-              </svg>
-              <span>Trusted by industries across India</span>
-            </p>
+            <div className="flex space-x-3 mt-6">
+              <a href="#" className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-accent/20 transition-colors duration-300 border border-white/5">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-accent/20 transition-colors duration-300 border border-white/5">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-accent/20 transition-colors duration-300 border border-white/5">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
           
+          {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="font-heading font-bold text-xl mb-6 pb-2 border-b border-white/10">Quick Links</h4>
+            <ul className="space-y-3">
               <li>
-                <Link href="/">
-                  <a className="hover:text-accent transition duration-300">Home</a>
-                </Link>
+                <FooterLink href="/" label="Home" />
               </li>
               <li>
-                <Link href="/services">
-                  <a className="hover:text-accent transition duration-300">Services</a>
-                </Link>
+                <FooterLink href="/services" label="Services" />
               </li>
               <li>
-                <Link href="/about">
-                  <a className="hover:text-accent transition duration-300">About Us</a>
-                </Link>
+                <FooterLink href="/about" label="About Us" />
               </li>
               <li>
-                <Link href="/projects">
-                  <a className="hover:text-accent transition duration-300">Projects</a>
-                </Link>
+                <FooterLink href="/projects" label="Projects" />
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="hover:text-accent transition duration-300">Contact</a>
-                </Link>
+                <FooterLink href="/contact" label="Contact" />
               </li>
             </ul>
           </div>
           
+          {/* Our Services */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-4">Our Services</h4>
-            <ul className="space-y-2">
+            <h4 className="font-heading font-bold text-xl mb-6 pb-2 border-b border-white/10">Our Services</h4>
+            <ul className="space-y-3">
               <li>
-                <Link href="/services#industrial">
-                  <a className="hover:text-accent transition duration-300">Industrial Equipment</a>
-                </Link>
+                <FooterLink href="/services#industrial" label="Industrial Equipment" />
               </li>
               <li>
-                <Link href="/services#medical">
-                  <a className="hover:text-accent transition duration-300">Medical Equipment</a>
-                </Link>
+                <FooterLink href="/services#medical" label="Medical Equipment" />
               </li>
               <li>
-                <Link href="/services#manufacturing">
-                  <a className="hover:text-accent transition duration-300">Manufacturing Systems</a>
-                </Link>
+                <FooterLink href="/services#manufacturing" label="Manufacturing Systems" />
               </li>
               <li>
-                <Link href="/services#individual">
-                  <a className="hover:text-accent transition duration-300">Individual Equipment</a>
-                </Link>
+                <FooterLink href="/services#individual" label="Individual Equipment" />
               </li>
               <li>
-                <Link href="/services#relocation">
-                  <a className="hover:text-accent transition duration-300">Equipment Relocation</a>
-                </Link>
+                <FooterLink href="/services#relocation" label="Equipment Relocation" />
               </li>
             </ul>
           </div>
           
+          {/* Working Hours */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-4">Working Hours</h4>
-            <ul className="space-y-2">
-              <li className="flex justify-between">
-                <span>Monday - Friday:</span>
-                <span>8:00 AM - 6:00 PM</span>
+            <h4 className="font-heading font-bold text-xl mb-6 pb-2 border-b border-white/10">Working Hours</h4>
+            <ul className="space-y-3">
+              <li className="flex items-center">
+                <Clock className="h-4 w-4 mr-2 text-accent" />
+                <div className="flex justify-between w-full">
+                  <span>Monday - Friday:</span>
+                  <span className="font-medium">8:00 AM - 6:00 PM</span>
+                </div>
               </li>
-              <li className="flex justify-between">
-                <span>Saturday:</span>
-                <span>9:00 AM - 4:00 PM</span>
+              <li className="flex items-center">
+                <Clock className="h-4 w-4 mr-2 text-accent" />
+                <div className="flex justify-between w-full">
+                  <span>Saturday:</span>
+                  <span className="font-medium">9:00 AM - 4:00 PM</span>
+                </div>
               </li>
-              <li className="flex justify-between">
-                <span>Sunday:</span>
-                <span>Closed</span>
+              <li className="flex items-center">
+                <Clock className="h-4 w-4 mr-2 text-accent" />
+                <div className="flex justify-between w-full">
+                  <span>Sunday:</span>
+                  <span className="font-medium">Closed</span>
+                </div>
               </li>
             </ul>
-            <p className="mt-4 text-sm text-neutral-300">
-              24/7 Emergency services available for critical equipment needs.
-            </p>
+            <div className="mt-6 p-3 rounded-lg bg-accent/10 border border-accent/20">
+              <p className="text-sm text-white">
+                24/7 Emergency services available for critical equipment needs.
+              </p>
+            </div>
           </div>
         </div>
         
-        <div className="border-t border-neutral-700 pt-6">
+        {/* Footer Bottom */}
+        <div className="border-t border-white/10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-neutral-400 mb-4 md:mb-0">
+            <p className="text-sm text-white/60 mb-4 md:mb-0">
               &copy; {new Date().getFullYear()} Sai Vinayaka. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy">
-                <a className="text-neutral-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <div className="cursor-pointer text-white/60 hover:text-white transition-colors duration-300">
+                  Privacy Policy
+                </div>
               </Link>
               <Link href="/terms">
-                <a className="text-neutral-400 hover:text-white transition duration-300">Terms of Service</a>
+                <div className="cursor-pointer text-white/60 hover:text-white transition-colors duration-300">
+                  Terms of Service
+                </div>
               </Link>
             </div>
           </div>
