@@ -9,37 +9,56 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="relative bg-primary text-white">
+      <section id="home" className="relative bg-gradient-to-r from-primary to-primary-dark text-white overflow-hidden">
+        {/* Animated Background Gradient */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 animate-pulse"></div>
+        
+        {/* Hero Image */}
         <div className="absolute inset-0 overflow-hidden">
           <img 
             src="https://images.unsplash.com/photo-1624029769761-8d7e3573682a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=800&q=80" 
             alt="Heavy equipment installation" 
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-25"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary-dark/90"></div>
         </div>
-        <div className="container mx-auto px-4 py-20 md:py-28 lg:py-36 relative z-10">
+        
+        {/* Hero Content */}
+        <div className="container mx-auto px-4 py-24 md:py-32 lg:py-40 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Professional Heavy Equipment Erection Services
+            <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide border border-white/20 rounded-full bg-white/10 backdrop-blur-sm">
+              ESTABLISHED 2022
+            </span>
+            <h1 className="heading-xl mb-6 leading-tight">
+              <span className="text-white">Professional</span> <span className="text-accent font-extrabold">Heavy Equipment</span> <span className="text-white">Erection Services</span>
             </h1>
-            <p className="text-xl mb-8 opacity-90">
-              Industrial-grade installation solutions for businesses, hospitals, manufacturers, and individual users.
+            <p className="text-xl mb-10 text-white/90 font-light max-w-2xl leading-relaxed">
+              Industrial-grade installation solutions for businesses, hospitals, manufacturers, and individual users with expertise, safety, and reliability.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-5">
               <Link href="/services">
-                <Button className="bg-accent hover:bg-accent-dark px-6 py-3 rounded shadow font-medium transition duration-300 text-white">
-                  Explore Services
+                <Button className="btn-gradient text-lg font-medium group relative">
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center">
+                    Explore Services
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </span>
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button variant="outline" className="bg-white text-primary hover:bg-neutral-200 px-6 py-3 rounded shadow font-medium transition duration-300">
+                <Button variant="outline" className="glass-effect text-white hover:bg-white/20 text-lg font-medium border-white/20 px-6 py-3">
                   Contact Us
                 </Button>
               </Link>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-primary-dark to-transparent"></div>
+        
+        {/* Animated Bottom Gradient */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-primary-dark to-transparent"></div>
+        
+        {/* Decorative Elements */}
+        <div className="hidden lg:block absolute right-10 bottom-20 w-32 h-32 rounded-full bg-accent opacity-20 blur-3xl animate-pulse"></div>
+        <div className="hidden lg:block absolute right-40 top-20 w-40 h-40 rounded-full bg-accent opacity-10 blur-3xl"></div>
       </section>
 
       {/* Service Highlights */}

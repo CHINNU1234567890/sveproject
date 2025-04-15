@@ -6,9 +6,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
-        heading: ["Roboto Condensed", "sans-serif"],
-        mono: ["Roboto Mono", "monospace"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",
