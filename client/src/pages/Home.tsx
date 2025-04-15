@@ -9,19 +9,17 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-r from-primary to-primary-dark text-white overflow-hidden">
+      <section 
+        id="home" 
+        className="relative text-white overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(var(--primary-rgb), 0.85), rgba(var(--primary-dark-rgb), 0.95)), url('/assets/images/heavy-crane.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         {/* Animated Background Gradient */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10 animate-pulse"></div>
-        
-        {/* Hero Image */}
-        <div className="absolute inset-0 overflow-hidden">
-          <img 
-            src="/assets/images/heavy-crane.jpg" 
-            alt="Heavy equipment installation" 
-            className="w-full h-full object-cover opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary-dark/90"></div>
-        </div>
         
         {/* Hero Content */}
         <div className="container mx-auto px-4 py-24 md:py-32 lg:py-40 relative z-10">
@@ -137,7 +135,15 @@ const Home = () => {
       <div className="angle-separator bg-primary"></div>
 
       {/* About Section */}
-      <section id="about" className="relative bg-gradient-to-br from-primary to-primary-dark text-white section-padding overflow-hidden">
+      <section 
+        id="about" 
+        className="relative text-white section-padding overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(to bottom right, rgba(var(--primary-rgb), 0.95), rgba(var(--primary-dark-rgb), 0.98))`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-pattern"></div>
