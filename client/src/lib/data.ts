@@ -7,7 +7,7 @@ export const serviceHighlights: Service[] = [
     title: 'Industrial Equipment',
     description: 'Specialized installation of manufacturing and processing machinery for factories.',
     icon: 'engineering',
-    imageUrl: '/assets/images/industrial-equipment.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1565465295423-68c959a634e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80',
     features: [
       'Manufacturing machinery installation',
       'Heavy equipment relocation',
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     id: '1',
     title: 'Factory Equipment Setup',
     description: 'Complete installation of heavy machinery for a manufacturing plant, including precise alignment and calibration.',
-    imageUrl: '/assets/images/factory-equipment.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1581093805071-a04e696db334?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80',
     category: 'Industrial',
     completedYear: '2023'
   },

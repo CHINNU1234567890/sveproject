@@ -13,7 +13,7 @@ const Home = () => {
         id="home" 
         className="relative text-white overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(var(--primary-rgb), 0.85), rgba(var(--primary-dark-rgb), 0.95)), url('/assets/images/heavy-crane.jpg')`,
+          backgroundImage: `linear-gradient(to right, rgba(var(--primary-rgb), 0.85), rgba(var(--primary-dark-rgb), 0.95)), url('https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&h=800&q=80')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -56,7 +56,7 @@ const Home = () => {
               <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/20 shadow-xl">
                 <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
                   <img 
-                    src="/assets/images/equipment-installation.jpg"
+                    src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
                     alt="Equipment installation" 
                     className="w-full h-full object-cover"
                   />
@@ -192,7 +192,7 @@ const Home = () => {
             <div className="relative">
               <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-white/10">
                 <img 
-                  src="/assets/images/industrial-equipment.jpg" 
+                  src="https://images.unsplash.com/photo-1478486982180-2de2fafa19f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
                   alt="Heavy equipment installation team" 
                   className="w-full h-auto"
                 />
