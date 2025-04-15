@@ -1,11 +1,75 @@
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { ArrowRight, CheckCircle, Omega, Factory, Hospital, User } from "lucide-react";
+import { ArrowRight, CheckCircle, Omega, Factory, Hospital, User, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { serviceHighlights, projects, testimonials } from "../lib/data";
 import ProjectCard from "../components/ProjectCard";
 import TestimonialCard from "../components/TestimonialCard";
 
+const featuredCards = [
+  {
+    id: 'manufacturing',
+    title: 'Manufacturing Equipment Setup',
+    description: 'Installation and calibration of heavy machinery for manufacturing plants with precision and safety.',
+    image: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80',
+    tags: ['Factory Setup', 'Expert Team', 'Certified'],
+    icon: <Factory className="h-5 w-5 text-accent" />
+  },
+  {
+    id: 'medical',
+    title: 'Medical Equipment Installation',
+    description: 'Specialized setup of sensitive medical machinery for hospitals with strict standards compliance.',
+    image: 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80',
+    tags: ['Healthcare', 'Precision', 'Sterilized'],
+    icon: <Hospital className="h-5 w-5 text-accent" />
+  },
+  {
+    id: 'construction',
+    title: 'Construction Equipment Erection',
+    description: 'Setup of heavy-duty construction equipment and machinery for building projects.',
+    image: 'https://images.unsplash.com/photo-1581094494280-274e2cca8b4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80',
+    tags: ['Safety First', 'On-Site', 'Licensed'],
+    icon: <Building className="h-5 w-5 text-accent" />
+  },
+  {
+    id: 'individual',
+    title: 'Small Business Equipment',
+    description: 'Custom installation solutions for small businesses and individual equipment users.',
+    image: 'https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80',
+    tags: ['Custom Solutions', 'Affordable', 'Support'],
+    icon: <User className="h-5 w-5 text-accent" />
+  }
+];
+
+const clientTypes = [
+  "Manufacturing Industries",
+  "Healthcare Facilities",
+  "Construction Projects",
+  "Individual Businesses"
+];
+
 const Home = () => {
+  const [activeFeaturedCard, setActiveFeaturedCard] = useState(0);
+  const [activeClientType, setActiveClientType] = useState(0);
+
+  // Change featured card every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeaturedCard((prev) => (prev + 1) % featuredCards.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
+  
+  // Change client type in headline every second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveClientType((prev) => (prev + 1) % clientTypes.length);
+    }, 1000);
+    
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
     <>
       {/* Hero Section */}
@@ -31,9 +95,39 @@ const Home = () => {
               <h1 className="heading-xl mb-6 leading-tight">
                 <span className="text-white">Professional</span> <span className="text-accent font-extrabold">Heavy Equipment</span> <span className="text-white">Erection Services</span>
               </h1>
-              <p className="text-xl mb-10 text-white/90 font-light max-w-2xl leading-relaxed">
-                Industrial-grade installation solutions for businesses, hospitals, manufacturers, and individual users with expertise, safety, and reliability.
+              <p className="text-xl mb-6 text-white/90 font-light max-w-2xl leading-relaxed">
+                Industrial-grade installation solutions for:
               </p>
+              <div className="grid grid-cols-2 gap-4 mb-10 max-w-xl">
+                <button 
+                  onClick={() => setActiveFeaturedCard(0)} 
+                  className="flex items-center space-x-2 bg-white/10 px-4 py-3 rounded-lg backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-colors text-left"
+                >
+                  <Factory className="h-5 w-5 text-accent" />
+                  <span className="text-white/90">Manufacturing Industries</span>
+                </button>
+                <button 
+                  onClick={() => setActiveFeaturedCard(1)} 
+                  className="flex items-center space-x-2 bg-white/10 px-4 py-3 rounded-lg backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-colors text-left"
+                >
+                  <Hospital className="h-5 w-5 text-accent" />
+                  <span className="text-white/90">Healthcare Facilities</span>
+                </button>
+                <button 
+                  onClick={() => setActiveFeaturedCard(2)} 
+                  className="flex items-center space-x-2 bg-white/10 px-4 py-3 rounded-lg backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-colors text-left"
+                >
+                  <Building className="h-5 w-5 text-accent" />
+                  <span className="text-white/90">Construction Projects</span>
+                </button>
+                <button 
+                  onClick={() => setActiveFeaturedCard(3)} 
+                  className="flex items-center space-x-2 bg-white/10 px-4 py-3 rounded-lg backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-colors text-left"
+                >
+                  <User className="h-5 w-5 text-accent" />
+                  <span className="text-white/90">Individual Businesses</span>
+                </button>
+              </div>
               <div className="flex flex-wrap gap-5 mb-10 lg:mb-0">
                 <Link href="/services">
                   <Button className="btn-gradient text-lg font-medium group relative">
@@ -56,24 +150,27 @@ const Home = () => {
               <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/20 shadow-xl">
                 <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
-                    alt="Equipment installation" 
-                    className="w-full h-full object-cover"
+                    src={featuredCards[activeFeaturedCard].image}
+                    alt={featuredCards[activeFeaturedCard].title} 
+                    className="w-full h-full object-cover transition-opacity duration-500"
                   />
                   <div className="absolute top-4 right-4 bg-accent/90 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Featured
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Industrial Equipment Setup</h3>
-                <p className="text-white/80 mb-4">
-                  Our specialized team handles the complex process of installing heavy industrial machinery with precision and safety.
+                <div className="flex items-center gap-2 mb-2">
+                  {featuredCards[activeFeaturedCard].icon}
+                  <h3 className="text-xl font-bold text-white">{featuredCards[activeFeaturedCard].title}</h3>
+                </div>
+                <p className="text-white/80 mb-4 h-[60px]">
+                  {featuredCards[activeFeaturedCard].description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">Safety First</span>
-                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">Expert Team</span>
-                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">Certified</span>
+                  {featuredCards[activeFeaturedCard].tags.map((tag, index) => (
+                    <span key={index} className="bg-white/20 text-white px-3 py-1 rounded-full text-xs">{tag}</span>
+                  ))}
                 </div>
-                <Link href="/services#industrial">
+                <Link href={`/services#${featuredCards[activeFeaturedCard].id}`}>
                   <Button className="w-full glass-effect text-white hover:bg-white/20 border-white/20">
                     <span className="inline-flex items-center">
                       Learn More
@@ -81,6 +178,18 @@ const Home = () => {
                     </span>
                   </Button>
                 </Link>
+              </div>
+              
+              {/* Card navigation dots */}
+              <div className="flex justify-center mt-4 space-x-2">
+                {featuredCards.map((_, index) => (
+                  <button 
+                    key={index}
+                    onClick={() => setActiveFeaturedCard(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeFeaturedCard ? 'bg-accent w-4' : 'bg-white/50'}`}
+                    aria-label={`View ${featuredCards[index].title}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
