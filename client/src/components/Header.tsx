@@ -40,7 +40,7 @@ const Header = () => {
               <ConstructionIcon className="h-6 w-6" />
             </div>
             <div className="ml-3">
-              <h1 className="font-heading font-bold text-2xl gradient-text tracking-tight">SAI VINAYAKA</h1>
+              <h1 className="font-heading font-bold text-2xl gradient-text tracking-tight">SAI VINAYAKA ENTERPRISES</h1>
               <p className="text-xs font-medium text-gray-600">Heavy Equipment Erection Services</p>
             </div>
           </div>

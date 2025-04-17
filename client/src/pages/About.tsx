@@ -14,7 +14,7 @@ const About = () => {
               Our Journey Since 2022
             </h1>
             <p className="text-xl opacity-90">
-              Get to know Sai Vinayaka - your trusted partner for heavy equipment erection services.
+              Get to know Sai Vinayaka Enterprises - your trusted partner for heavy equipment erection services.
             </p>
           </div>
         </div>
@@ -27,7 +27,7 @@ const About = () => {
             <div>
               <h2 className="font-heading text-3xl font-bold mb-6 text-neutral-800">Our Story</h2>
               <p className="text-neutral-600 mb-4">
-                Founded in 2022, Sai Vinayaka emerged from a vision to bridge the gap in professional heavy equipment erection services across industries. Our founder, with over 15 years of experience in industrial equipment erection, recognized the need for a specialized service provider focused exclusively on equipment erection.
+                Founded in 2022, Sai Vinayaka Enterprises emerged from a vision to bridge the gap in professional heavy equipment erection services across industries. Our founder, with over 15 years of experience in industrial equipment erection, recognized the need for a specialized service provider focused exclusively on equipment erection.
               </p>
               <p className="text-neutral-600 mb-4">
                 Starting with a small team of technical experts, we have grown steadily by delivering exceptional service quality and building strong client relationships. Today, we serve diverse industries including manufacturing, healthcare, pharmaceuticals, and more.
@@ -93,7 +93,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral-800 mb-4">Our Core Values</h2>
             <p className="max-w-2xl mx-auto text-neutral-600">
-              These principles guide everything we do at Sai Vinayaka
+              These principles guide everything we do at Sai Vinayaka Enterprises
             </p>
           </div>
           
@@ -167,7 +167,7 @@ const About = () => {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-3xl font-bold mb-6">Work With Sai Vinayaka</h2>
+          <h2 className="font-heading text-3xl font-bold mb-6">Work With Sai Vinayaka Enterprises</h2>
           <p className="max-w-2xl mx-auto text-lg mb-8 opacity-90">
             Let our expert team handle your equipment erection needs with precision and care.
           </p>

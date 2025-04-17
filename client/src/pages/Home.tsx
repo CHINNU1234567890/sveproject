@@ -279,7 +279,7 @@ const Home = () => {
               <span className="inline-block px-4 py-1.5 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-semibold tracking-wider mb-4">ABOUT US</span>
               <h2 className="heading-lg text-white mb-6">Delivering Excellence Since <span className="text-accent font-bold">2022</span></h2>
               <p className="mb-8 text-white/90 text-lg leading-relaxed">
-                Founded in 2022, Sai Vinayaka has quickly established itself as a trusted partner in heavy equipment erection services. We combine technical expertise with a commitment to safety and quality to deliver exceptional results for our clients.
+                Founded in 2022, Sai Vinayaka Enterprises has quickly established itself as a trusted partner in heavy equipment erection services. We combine technical expertise with a commitment to safety and quality to deliver exceptional results for our clients.
               </p>
               <div className="space-y-5 mb-10">
                 <div className="flex items-start bg-white/5 p-4 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">

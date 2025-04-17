@@ -35,7 +35,7 @@ const Footer = () => {
               <div className="h-12 w-12 rounded-lg bg-white/10 backdrop-blur-sm mr-3 flex items-center justify-center border border-white/5">
                 <Wrench className="h-6 w-6 text-accent" />
               </div>
-              <h3 className="font-heading font-bold text-2xl">SAI VINAYAKA</h3>
+              <h3 className="font-heading font-bold text-2xl">SAI VINAYAKA ENTERPRISES</h3>
             </div>
             <p className="text-white mb-6 leading-relaxed">
               Professional heavy equipment erection services since 2022. Delivering excellence in erection, setup, and calibration.
@@ -128,7 +128,7 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-white mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} Sai Vinayaka. All rights reserved.
+              &copy; {new Date().getFullYear()} Sai Vinayaka Enterprises. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy">
