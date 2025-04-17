@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular background -->
+  <circle cx="100" cy="100" r="95" fill="url(#paint0_radial)" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- Gear elements -->
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M100 55C103.866 55 107 58.134 107 62V72.5858L113.464 66.1213C116.098 63.4869 120.366 63.4869 123 66.1213C125.634 68.7556 125.634 73.0239 123 75.6583L116.536 82.1228H127C130.866 82.1228 134 85.2568 134 89.1228C134 92.9889 130.866 96.1228 127 96.1228H116.536L123 102.587C125.634 105.222 125.634 109.49 123 112.124C120.366 114.759 116.098 114.759 113.464 112.124L107 105.66V116.123C107 119.989 103.866 123.123 100 123.123C96.134 123.123 93 119.989 93 116.123V105.66L86.5355 112.124C83.9011 114.759 79.6329 114.759 76.9986 112.124C74.3642 109.49 74.3642 105.222 76.9986 102.587L83.4631 96.1228H73C69.134 96.1228 66 92.9889 66 89.1228C66 85.2568 69.134 82.1228 73 82.1228H83.4631L76.9986 75.6583C74.3642 73.0239 74.3642 68.7556 76.9986 66.1213C79.6329 63.4869 83.9011 63.4869 86.5355 66.1213L93 72.5858V62C93 58.134 96.134 55 100 55Z" fill="url(#paint1_linear)"/>
+  
+  <!-- Crane/Hook element -->
+  <path d="M100 123C100 123 100 140 100 155C100 170 120 165 120 150C120 140 110 135 100 140" stroke="url(#paint2_linear)" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Text: SVE -->
+  <path d="M58 147C58 147 70 142 70 152C70 162 58 157 58 167C58 177 70 172 70 172" stroke="#3B82F6" stroke-width="4" stroke-linecap="round"/>
+  <path d="M80 142L80 177M80 142H95M80 160H95M80 177H95" stroke="#3B82F6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M105 142H130M105 160H125M105 177H130" stroke="#3B82F6" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Company initials in center -->
+  <text x="100" y="95" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">SVE</text>
+  
+  <!-- Gradients definitions -->
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 100) rotate(90) scale(95)">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#1E40AF"/>
+    </radialGradient>
+    <linearGradient id="paint1_linear" x1="66" y1="55" x2="134" y2="123" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear" x1="100" y1="123" x2="120" y2="155" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+</svg>

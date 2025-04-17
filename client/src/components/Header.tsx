@@ -36,8 +36,8 @@ const Header = () => {
         <Link href="/">
           <div className="flex items-center cursor-pointer">
             {/* Modern SVG Logo */}
-            <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-r from-primary to-accent text-white hidden sm:flex">
-              <ConstructionIcon className="h-6 w-6" />
+            <div className="flex items-center justify-center h-12 w-12 rounded-lg overflow-hidden hidden sm:flex">
+              <img src="/assets/logo.svg" alt="Sai Vinayaka Enterprises Logo" className="h-12 w-12" />
             </div>
             <div className="ml-3">
               <h1 className="font-heading font-bold text-2xl gradient-text tracking-tight">SAI VINAYAKA ENTERPRISES</h1>

@@ -32,8 +32,8 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-6">
-              <div className="h-12 w-12 rounded-lg bg-white/10 backdrop-blur-sm mr-3 flex items-center justify-center border border-white/5">
-                <Wrench className="h-6 w-6 text-accent" />
+              <div className="h-12 w-12 rounded-lg overflow-hidden mr-3 flex items-center justify-center">
+                <img src="/assets/logo.svg" alt="Sai Vinayaka Enterprises Logo" className="h-12 w-12" />
               </div>
               <h3 className="font-heading font-bold text-2xl">SAI VINAYAKA ENTERPRISES</h3>
             </div>
