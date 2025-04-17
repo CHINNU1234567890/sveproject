@@ -3,6 +3,8 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
+import { ZodError } from "zod";
+import { sendNotificationEmail, sendConfirmationEmail } from "./emailService";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Handle contact form submissions
@@ -10,13 +12,38 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactSchema.parse(req.body);
       const newContact = await storage.createContact(validatedData);
+      
+      // Send email notifications
+      try {
+        // Try to send notification emails, but don't fail the request if they fail
+        await Promise.allSettled([
+          sendNotificationEmail({
+            name: validatedData.name,
+            email: validatedData.email,
+            phone: validatedData.phone,
+            service: validatedData.service,
+            message: validatedData.message
+          }),
+          sendConfirmationEmail({
+            name: validatedData.name,
+            email: validatedData.email,
+            phone: validatedData.phone,
+            service: validatedData.service,
+            message: validatedData.message
+          })
+        ]);
+      } catch (emailError) {
+        console.error('Error sending emails:', emailError);
+        // We don't fail the request if email sending fails
+      }
+      
       res.status(201).json({
         success: true,
         message: "Contact form submitted successfully",
         data: newContact
       });
     } catch (error) {
-      if (error instanceof Error) {
+      if (error instanceof ZodError) {
         const validationError = fromZodError(error);
         res.status(400).json({
           success: false,
@@ -25,7 +52,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } else {
         res.status(500).json({
           success: false,
-          message: "An unexpected error occurred"
+          message: error instanceof Error ? error.message : "An unexpected error occurred"
         });
       }
     }
