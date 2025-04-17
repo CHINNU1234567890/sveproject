@@ -27,13 +27,13 @@ const About = () => {
             <div>
               <h2 className="font-heading text-3xl font-bold mb-6 text-neutral-800">Our Story</h2>
               <p className="text-neutral-600 mb-4">
-                Founded in 2022, Sai Vinayaka emerged from a vision to bridge the gap in professional heavy equipment installation services across industries. Our founder, with over 15 years of experience in industrial equipment setup, recognized the need for a specialized service provider focused exclusively on equipment erection.
+                Founded in 2022, Sai Vinayaka emerged from a vision to bridge the gap in professional heavy equipment erection services across industries. Our founder, with over 15 years of experience in industrial equipment erection, recognized the need for a specialized service provider focused exclusively on equipment erection.
               </p>
               <p className="text-neutral-600 mb-4">
                 Starting with a small team of technical experts, we have grown steadily by delivering exceptional service quality and building strong client relationships. Today, we serve diverse industries including manufacturing, healthcare, pharmaceuticals, and more.
               </p>
               <p className="text-neutral-600 mb-4">
-                Our commitment to technical excellence, safety standards, and client satisfaction has established us as a trusted name in the equipment installation sector in just a short time.
+                Our commitment to technical excellence, safety standards, and client satisfaction has established us as a trusted name in the equipment erection sector in just a short time.
               </p>
             </div>
             <div className="relative">
@@ -80,7 +80,7 @@ const About = () => {
               </div>
               <h3 className="font-heading text-2xl font-bold mb-4 text-center">Our Vision</h3>
               <p className="text-neutral-600 text-center">
-                To become the leading equipment erection service provider nationally, setting new industry standards for quality, safety, and customer satisfaction. We envision building long-term partnerships with our clients as their trusted advisor for all equipment installation needs.
+                To become the leading equipment erection service provider nationally, setting new industry standards for quality, safety, and customer satisfaction. We envision building long-term partnerships with our clients as their trusted advisor for all equipment erection needs.
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ const About = () => {
               </div>
               <h3 className="font-heading text-xl font-bold mb-2">Technical Expertise</h3>
               <p className="text-neutral-600">
-                We continuously develop our technical knowledge to provide the most effective solutions for complex installations.
+                We continuously develop our technical knowledge to provide the most effective solutions for complex equipment erection projects.
               </p>
             </div>
             
@@ -144,7 +144,7 @@ const About = () => {
               </div>
               <h3 className="font-heading text-xl font-bold mb-2">Timeliness</h3>
               <p className="text-neutral-600">
-                We respect our clients' time by adhering to project schedules and completing installations on or before deadlines.
+                We respect our clients' time by adhering to project schedules and completing equipment erection projects on or before deadlines.
               </p>
             </div>
             
@@ -185,7 +185,7 @@ const About = () => {
                 <h3 className="font-heading text-xl font-bold mb-1">Rajiv Mehta</h3>
                 <p className="text-accent font-medium mb-4">Founder & Technical Director</p>
                 <p className="text-neutral-600">
-                  With over 15 years of experience in industrial equipment installation across various industries.
+                  With over 15 years of experience in industrial equipment erection across various industries.
                 </p>
               </div>
             </div>
@@ -200,7 +200,7 @@ const About = () => {
                 <h3 className="font-heading text-xl font-bold mb-1">Anita Patel</h3>
                 <p className="text-accent font-medium mb-4">Operations Manager</p>
                 <p className="text-neutral-600">
-                  Specializes in project management and ensuring smooth workflow for all installation projects.
+                  Specializes in project management and ensuring smooth workflow for all equipment erection projects.
                 </p>
               </div>
             </div>
@@ -215,7 +215,7 @@ const About = () => {
                 <h3 className="font-heading text-xl font-bold mb-1">Vikram Singh</h3>
                 <p className="text-accent font-medium mb-4">Lead Technical Engineer</p>
                 <p className="text-neutral-600">
-                  Expert in complex equipment installation with particular focus on precision machinery.
+                  Expert in complex equipment erection with particular focus on precision machinery.
                 </p>
               </div>
             </div>
@@ -228,7 +228,7 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading text-3xl font-bold mb-6">Work With Sai Vinayaka</h2>
           <p className="max-w-2xl mx-auto text-lg mb-8 opacity-90">
-            Let our expert team handle your equipment installation needs with precision and care.
+            Let our expert team handle your equipment erection needs with precision and care.
           </p>
           <Link href="/contact">
             <Button className="bg-accent hover:bg-accent-dark text-white font-medium px-6 py-3 rounded shadow">

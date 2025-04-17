@@ -58,7 +58,7 @@ const Projects = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="font-heading text-2xl font-bold text-white mb-2">Industrial Installations</h3>
+                <h3 className="font-heading text-2xl font-bold text-white mb-2">Industrial Equipment Erection</h3>
                 <p className="text-white text-opacity-90 mb-4">
                   Heavy machinery setup for manufacturing plants
                 </p>
