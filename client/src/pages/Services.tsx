@@ -2,8 +2,11 @@ import { serviceHighlights } from "../lib/data";
 import ServiceCard from "../components/ServiceCard";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { useServiceRequest } from "../contexts/ServiceRequestContext";
 
 const Services = () => {
+  const { openServiceRequest } = useServiceRequest();
+  
   return (
     <>
       {/* Services Header */}
@@ -80,11 +83,12 @@ const Services = () => {
           <p className="max-w-2xl mx-auto text-xl mb-8 opacity-90">
             Contact us today to discuss your equipment erection needs and get a customized quote.
           </p>
-          <Link href="/contact">
-            <Button className="bg-accent hover:bg-accent-dark text-white font-medium px-8 py-4 rounded shadow text-lg">
-              Request a Quote
-            </Button>
-          </Link>
+          <Button 
+            className="bg-accent hover:bg-accent-dark text-white font-medium px-8 py-4 rounded shadow text-lg"
+            onClick={() => openServiceRequest()}
+          >
+            Request Service
+          </Button>
         </div>
       </section>
     </>
