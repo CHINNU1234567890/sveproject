@@ -27,7 +27,7 @@ const Projects = () => {
           <div className="mb-12">
             <h2 className="font-heading text-3xl font-bold mb-6 text-neutral-800">Featured Projects</h2>
             <p className="text-neutral-600 max-w-3xl">
-              Since our establishment in 2022, we have successfully completed numerous equipment installation projects for clients across industrial, healthcare, manufacturing, and other sectors. Browse through our portfolio to see examples of our work.
+              Since our establishment in 2022, we have successfully completed numerous equipment erection projects for clients across industrial, healthcare, manufacturing, and other sectors. Browse through our portfolio to see examples of our work.
             </p>
           </div>
           
@@ -53,7 +53,7 @@ const Projects = () => {
             <div className="relative group overflow-hidden rounded-lg shadow-md">
               <img 
                 src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=500&q=80" 
-                alt="Industrial installations" 
+                alt="Industrial equipment erection" 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
@@ -80,7 +80,7 @@ const Projects = () => {
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="font-heading text-2xl font-bold text-white mb-2">Medical Equipment</h3>
                 <p className="text-white text-opacity-90 mb-4">
-                  Precision installation of healthcare machinery
+                  Precision erection of healthcare machinery
                 </p>
                 <Link href="/services#medical">
                   <span className="inline-block bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded text-sm font-medium cursor-pointer">
@@ -142,7 +142,7 @@ const Projects = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading text-3xl font-bold mb-6 text-neutral-800">Ready to Start Your Project?</h2>
           <p className="max-w-2xl mx-auto text-neutral-600 mb-8">
-            Contact us today to discuss your equipment installation needs and join our list of satisfied clients.
+            Contact us today to discuss your equipment erection needs and join our list of satisfied clients.
           </p>
           <Link href="/contact">
             <Button className="bg-accent hover:bg-accent-dark text-white font-medium px-6 py-3 rounded shadow">

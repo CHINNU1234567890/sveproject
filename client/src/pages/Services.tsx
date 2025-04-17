@@ -57,7 +57,7 @@ const Services = () => {
               <div className="bg-white rounded-lg border border-neutral-200 p-6 shadow-sm">
                 <div className="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full mb-4 font-bold text-xl">2</div>
                 <h3 className="font-heading text-xl font-bold mb-2">Planning & Preparation</h3>
-                <p className="text-neutral-600">We develop a detailed installation plan, arrange necessary resources, and prepare the site for equipment erection.</p>
+                <p className="text-neutral-600">We develop a detailed erection plan, arrange necessary resources, and prepare the site for equipment setup.</p>
               </div>
               <div className="hidden lg:block absolute -right-4 top-10 w-8 h-2 bg-primary"></div>
             </div>
@@ -65,8 +65,8 @@ const Services = () => {
             <div className="relative">
               <div className="bg-white rounded-lg border border-neutral-200 p-6 shadow-sm">
                 <div className="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full mb-4 font-bold text-xl">3</div>
-                <h3 className="font-heading text-xl font-bold mb-2">Equipment Installation</h3>
-                <p className="text-neutral-600">Our team carefully installs the equipment according to manufacturer specifications and industry standards.</p>
+                <h3 className="font-heading text-xl font-bold mb-2">Equipment Erection</h3>
+                <p className="text-neutral-600">Our team carefully erects the equipment according to manufacturer specifications and industry standards.</p>
               </div>
               <div className="hidden lg:block absolute -right-4 top-10 w-8 h-2 bg-primary"></div>
             </div>
@@ -87,7 +87,7 @@ const Services = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="max-w-2xl mx-auto text-xl mb-8 opacity-90">
-            Contact us today to discuss your equipment installation needs and get a customized quote.
+            Contact us today to discuss your equipment erection needs and get a customized quote.
           </p>
           <Link href="/contact">
             <Button className="bg-accent hover:bg-accent-dark text-white font-medium px-8 py-4 rounded shadow text-lg">
