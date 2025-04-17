@@ -1,8 +1,11 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Award, Clock, Settings, Shield, Users } from "lucide-react";
+import { useServiceRequest } from "../contexts/ServiceRequestContext";
 
 const About = () => {
+  const { openServiceRequest } = useServiceRequest();
+  
   return (
     <>
       {/* About Header */}
@@ -38,9 +41,9 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581092921461-39b51a3bf913?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
-                alt="Company history" 
-                className="rounded-lg shadow-lg"
+                src="/assets/images/colleagues-safety-equipment-working.jpg" 
+                alt="Sai Vinayaka Enterprises team at work" 
+                className="rounded-lg shadow-lg object-cover h-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-accent text-white p-4 rounded-lg shadow-lg">
                 <p className="font-heading font-bold text-xl">Established 2022</p>
@@ -171,11 +174,12 @@ const About = () => {
           <p className="max-w-2xl mx-auto text-lg mb-8 opacity-90">
             Let our expert team handle your equipment erection needs with precision and care.
           </p>
-          <Link href="/contact">
-            <Button className="bg-accent hover:bg-accent-dark text-white font-medium px-6 py-3 rounded shadow">
-              Contact Us Today
-            </Button>
-          </Link>
+          <Button 
+            className="bg-accent hover:bg-accent-dark text-white font-medium px-6 py-3 rounded shadow"
+            onClick={() => openServiceRequest()}
+          >
+            Request Service Today
+          </Button>
         </div>
       </section>
     </>
