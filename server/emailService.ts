@@ -11,6 +11,19 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Log email configuration status (without exposing secrets)
+console.log(`Email service configured with user: ${process.env.EMAIL_USER ? 'CONFIGURED' : 'MISSING'}`);
+console.log(`Email password: ${process.env.EMAIL_PASS ? 'CONFIGURED' : 'MISSING'}`);
+
+// Verify transporter configuration
+transporter.verify((error) => {
+  if (error) {
+    console.error('SMTP connection error:', error.message);
+  } else {
+    console.log('Email server is ready to send messages');
+  }
+});
+
 interface EmailData {
   name: string;
   email: string;
