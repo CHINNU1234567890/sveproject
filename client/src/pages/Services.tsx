@@ -15,7 +15,7 @@ const Services = () => {
               Comprehensive Equipment Solutions
             </h1>
             <p className="text-xl opacity-90 mb-6">
-              From initial consultation to final installation, we provide end-to-end equipment erection services customized to your needs.
+              From initial consultation to final erection, we provide end-to-end equipment erection services customized to your needs.
             </p>
           </div>
         </div>

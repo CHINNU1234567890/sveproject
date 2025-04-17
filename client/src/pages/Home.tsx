@@ -9,16 +9,16 @@ import TestimonialCard from "../components/TestimonialCard";
 const featuredCards = [
   {
     id: 'manufacturing',
-    title: 'Manufacturing Equipment Setup',
-    description: 'Installation and calibration of heavy machinery for manufacturing plants with precision and safety.',
+    title: 'Manufacturing Equipment Erection',
+    description: 'Precision erection of heavy machinery for manufacturing plants with safety and expertise.',
     image: '/assets/images/site-image-1.jpg',
     tags: ['Factory Setup', 'Expert Team', 'Certified'],
     icon: <Factory className="h-5 w-5 text-accent" />
   },
   {
     id: 'medical',
-    title: 'Medical Equipment Installation',
-    description: 'Specialized setup of sensitive medical machinery for hospitals with strict standards compliance.',
+    title: 'Medical Equipment Erection',
+    description: 'Specialized erection of sensitive medical machinery for hospitals with strict standards compliance.',
     image: '/assets/images/site-image-2.jpg',
     tags: ['Healthcare', 'Precision', 'Sterilized'],
     icon: <Hospital className="h-5 w-5 text-accent" />
@@ -26,7 +26,7 @@ const featuredCards = [
   {
     id: 'construction',
     title: 'Construction Equipment Erection',
-    description: 'Setup of heavy-duty construction equipment and machinery for building projects.',
+    description: 'Erection of heavy-duty construction equipment and machinery for building projects.',
     image: '/assets/images/site-image-3.jpg',
     tags: ['Safety First', 'On-Site', 'Licensed'],
     icon: <Building className="h-5 w-5 text-accent" />
@@ -34,7 +34,7 @@ const featuredCards = [
   {
     id: 'individual',
     title: 'Small Business Equipment',
-    description: 'Custom installation solutions for small businesses and individual equipment users.',
+    description: 'Custom erection solutions for small businesses and individual equipment users.',
     image: '/assets/images/site-image-4.jpg',
     tags: ['Custom Solutions', 'Affordable', 'Support'],
     icon: <User className="h-5 w-5 text-accent" />
@@ -109,7 +109,7 @@ const Home = () => {
                 </div>
               </h1>
               <p className="text-xl mb-6 text-white/90 font-light max-w-2xl leading-relaxed">
-                Industrial-grade installation solutions for:
+                Industrial-grade equipment erection services for:
               </p>
               <div className="grid grid-cols-2 gap-4 mb-10 max-w-xl">
                 <button 
@@ -315,7 +315,7 @@ const Home = () => {
               <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-white/10">
                 <img 
                   src="/assets/images/site-image-2.jpg" 
-                  alt="Heavy equipment installation team" 
+                  alt="Heavy equipment erection team" 
                   className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
@@ -384,7 +384,7 @@ const Home = () => {
           <div className="mt-20 text-center">
             <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-primary to-primary-dark text-white shadow-xl">
               <h3 className="text-2xl font-bold mb-4">Ready to work with us?</h3>
-              <p className="mb-6 text-white/90">Contact us today to discuss your heavy equipment installation needs.</p>
+              <p className="mb-6 text-white/90">Contact us today to discuss your heavy equipment erection needs.</p>
               <Link href="/contact">
                 <Button className="glass-effect hover:bg-white/20 text-white border-white/20 px-6 py-3 text-lg font-medium">
                   Contact Us Today
