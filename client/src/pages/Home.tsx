@@ -76,7 +76,7 @@ const Home = () => {
         id="home" 
         className="relative text-white overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(var(--primary-rgb), 0.85), rgba(var(--primary-dark-rgb), 0.95)), url('/assets/images/site-image-5.jpg')`,
+          backgroundImage: `linear-gradient(to right, rgba(var(--primary-rgb), 0.85), rgba(var(--primary-dark-rgb), 0.95)), url('/assets/images/colleagues-safety-equipment-working.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -312,7 +312,7 @@ const Home = () => {
             <div className="relative">
               <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-white/10">
                 <img 
-                  src="/assets/images/site-image-2.jpg" 
+                  src="/assets/images/colleagues-safety-equipment-working.jpg" 
                   alt="Heavy equipment erection team" 
                   className="w-full h-auto"
                 />
