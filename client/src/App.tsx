@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { useEffect } from "react";
 
+import { ServiceRequestProvider } from "./contexts/ServiceRequestContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -46,8 +47,10 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
-      <Toaster />
+      <ServiceRequestProvider>
+        <Router />
+        <Toaster />
+      </ServiceRequestProvider>
     </QueryClientProvider>
   );
 }
