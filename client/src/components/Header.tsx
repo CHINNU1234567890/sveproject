@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ConstructionIcon, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useServiceRequest } from "../contexts/ServiceRequestContext";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+  const { openServiceRequest } = useServiceRequest();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -66,14 +68,15 @@ const Header = () => {
         
         {/* Contact CTA Button */}
         <div className="hidden lg:block">
-          <Link href="/contact">
-            <Button className="btn-gradient group">
-              <span className="flex items-center">
-                <PhoneCall className="mr-2 h-4 w-4 group-hover:animate-pulse" /> 
-                Get Quote
-              </span>
-            </Button>
-          </Link>
+          <Button 
+            className="btn-gradient group" 
+            onClick={() => openServiceRequest()}
+          >
+            <span className="flex items-center">
+              <PhoneCall className="mr-2 h-4 w-4 group-hover:animate-pulse" /> 
+              Request Service
+            </span>
+          </Button>
         </div>
       </div>
       
@@ -100,15 +103,19 @@ const Header = () => {
               <div className="py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors">
                 <NavLink to="/contact" label="Contact" active={isActive("/contact")} />
               </div>
-              <div onClick={() => closeMobileMenu()} className="py-2">
-                <Link href="/contact">
-                  <Button className="btn-gradient w-full">
-                    <span className="flex items-center justify-center">
-                      <PhoneCall className="mr-2 h-4 w-4" /> 
-                      Get Quote
-                    </span>
-                  </Button>
-                </Link>
+              <div className="py-2">
+                <Button 
+                  className="btn-gradient w-full"
+                  onClick={() => {
+                    closeMobileMenu();
+                    openServiceRequest();
+                  }}
+                >
+                  <span className="flex items-center justify-center">
+                    <PhoneCall className="mr-2 h-4 w-4" /> 
+                    Request Service
+                  </span>
+                </Button>
               </div>
             </nav>
           </div>
