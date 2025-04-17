@@ -27,11 +27,23 @@ export const serviceHighlights: Service[] = [
     ]
   },
   {
+    id: 'datacenter',
+    title: 'DATA CENTRE SETUP',
+    description: 'Comprehensive erection and infrastructure setup for data centers with precision and reliability.',
+    icon: 'storage',
+    imageUrl: '/assets/images/site-image-3.jpg',
+    features: [
+      'Server rack erection and installation',
+      'Cooling system setup',
+      'Power distribution infrastructure'
+    ]
+  },
+  {
     id: 'manufacturing',
     title: 'Manufacturing Systems',
     description: 'Erection of production lines and automated systems for manufacturers.',
     icon: 'factory',
-    imageUrl: '/assets/images/site-image-3.jpg',
+    imageUrl: '/assets/images/site-image-4.jpg',
     features: [
       'Assembly line erection',
       'Robotic system positioning',
@@ -43,7 +55,7 @@ export const serviceHighlights: Service[] = [
     title: 'Individual Equipment',
     description: 'Specialized erection services for individual heavy equipment users and small businesses.',
     icon: 'person',
-    imageUrl: '/assets/images/site-image-4.jpg',
+    imageUrl: '/assets/images/site-image-5.jpg',
     features: [
       'Workshop machinery erection',
       'Small-scale production equipment',
@@ -55,7 +67,7 @@ export const serviceHighlights: Service[] = [
     title: 'Equipment Relocation',
     description: 'Safe and efficient relocation of heavy machinery within or between facilities.',
     icon: 'local_shipping',
-    imageUrl: '/assets/images/site-image-5.jpg',
+    imageUrl: '/assets/images/site-image-1.jpg',
     features: [
       'Disassembly and reassembly',
       'Safe transportation',
@@ -76,26 +88,26 @@ export const projects: Project[] = [
   },
   {
     id: '2',
+    title: 'DATA CENTRE SETUP',
+    description: 'Full data center infrastructure setup including server racks, cooling systems, and power management.',
+    imageUrl: '/assets/images/site-image-2.jpg',
+    category: 'Technology',
+    completedYear: '2023'
+  },
+  {
+    id: '3',
     title: 'Medical Imaging Equipment',
     description: 'Precision erection of sensitive medical imaging equipment for a newly constructed hospital wing.',
-    imageUrl: '/assets/images/site-image-2.jpg',
+    imageUrl: '/assets/images/site-image-3.jpg',
     category: 'Healthcare',
     completedYear: '2022'
   },
   {
-    id: '3',
+    id: '4',
     title: 'Automated Assembly Line',
     description: 'Erection of a fully automated production line for an electronics manufacturer, including precise positioning.',
-    imageUrl: '/assets/images/site-image-3.jpg',
-    category: 'Manufacturing',
-    completedYear: '2023'
-  },
-  {
-    id: '4',
-    title: 'Pharmaceutical Lab Equipment',
-    description: 'Erection of specialized laboratory equipment for a pharmaceutical research facility with precise requirements.',
     imageUrl: '/assets/images/site-image-4.jpg',
-    category: 'Pharmaceutical',
+    category: 'Manufacturing',
     completedYear: '2023'
   },
   {
@@ -147,6 +159,7 @@ export const testimonials: Testimonial[] = [
 export const serviceOptions = [
   { value: "industrial", label: "Industrial Equipment Erection" },
   { value: "medical", label: "Medical Equipment Erection" },
+  { value: "datacenter", label: "DATA CENTRE SETUP" },
   { value: "manufacturing", label: "Manufacturing Systems Erection" },
   { value: "individual", label: "Individual Equipment Services" },
   { value: "relocation", label: "Equipment Relocation" },

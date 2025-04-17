@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { ArrowRight, CheckCircle, Omega, Factory, Hospital, User, Building } from "lucide-react";
+import { ArrowRight, CheckCircle, Omega, Factory, Hospital, User, Building, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { serviceHighlights, projects, testimonials } from "../lib/data";
+import { serviceHighlights, projects } from "../lib/data";
 import ProjectCard from "../components/ProjectCard";
-import TestimonialCard from "../components/TestimonialCard";
 
 const featuredCards = [
   {
@@ -16,20 +15,20 @@ const featuredCards = [
     icon: <Factory className="h-5 w-5 text-accent" />
   },
   {
+    id: 'datacenter',
+    title: 'DATA CENTRE SETUP',
+    description: 'Complete infrastructure setup for data centers with precision and reliability.',
+    image: '/assets/images/site-image-2.jpg',
+    tags: ['Servers', 'Network', 'Cooling'],
+    icon: <Database className="h-5 w-5 text-accent" />
+  },
+  {
     id: 'medical',
     title: 'Medical Equipment Erection',
     description: 'Specialized erection of sensitive medical machinery for hospitals with strict standards compliance.',
-    image: '/assets/images/site-image-2.jpg',
+    image: '/assets/images/site-image-3.jpg',
     tags: ['Healthcare', 'Precision', 'Sterilized'],
     icon: <Hospital className="h-5 w-5 text-accent" />
-  },
-  {
-    id: 'construction',
-    title: 'Construction Equipment Erection',
-    description: 'Erection of heavy-duty construction equipment and machinery for building projects.',
-    image: '/assets/images/site-image-3.jpg',
-    tags: ['Safety First', 'On-Site', 'Licensed'],
-    icon: <Building className="h-5 w-5 text-accent" />
   },
   {
     id: 'individual',
@@ -43,8 +42,8 @@ const featuredCards = [
 
 const clientTypes = [
   "Manufacturing Industries",
+  "Data Centers",
   "Healthcare Facilities",
-  "Construction Projects",
   "Individual Businesses"
 ];
 
@@ -123,15 +122,15 @@ const Home = () => {
                   onClick={() => setActiveFeaturedCard(1)} 
                   className="flex items-center space-x-2 bg-white/10 px-4 py-3 rounded-lg backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-colors text-left"
                 >
-                  <Hospital className="h-5 w-5 text-accent" />
-                  <span className="text-white/90">Healthcare Facilities</span>
+                  <Database className="h-5 w-5 text-accent" />
+                  <span className="text-white/90">Data Centers</span>
                 </button>
                 <button 
                   onClick={() => setActiveFeaturedCard(2)} 
                   className="flex items-center space-x-2 bg-white/10 px-4 py-3 rounded-lg backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-colors text-left"
                 >
-                  <Building className="h-5 w-5 text-accent" />
-                  <span className="text-white/90">Construction Projects</span>
+                  <Hospital className="h-5 w-5 text-accent" />
+                  <span className="text-white/90">Healthcare Facilities</span>
                 </button>
                 <button 
                   onClick={() => setActiveFeaturedCard(3)} 
@@ -220,21 +219,23 @@ const Home = () => {
       <section className="section-padding bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wider mb-4">OUR EXPERTISE</span>
             <h2 className="heading-lg gradient-text mb-4">Specialized Equipment Erection Services</h2>
             <p className="max-w-2xl mx-auto text-gray-600 text-lg">
               We provide comprehensive solutions for erecting and setting up heavy equipment across various industries.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {serviceHighlights.slice(0, 4).map((service) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              serviceHighlights.find(s => s.id === 'industrial') || serviceHighlights[0],
+              serviceHighlights.find(s => s.id === 'datacenter') || serviceHighlights[0], 
+              serviceHighlights.find(s => s.id === 'medical') || serviceHighlights[1]
+            ].map((service) => (
               <div key={service.id} className="modern-card p-8 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:shadow transform transition-all duration-300 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-primary/30 group-hover:to-accent/30">
                   {service.id === 'industrial' && <Omega className="h-7 w-7 text-primary group-hover:text-accent transition-colors duration-300" />}
                   {service.id === 'medical' && <Hospital className="h-7 w-7 text-primary group-hover:text-accent transition-colors duration-300" />}
-                  {service.id === 'manufacturing' && <Factory className="h-7 w-7 text-primary group-hover:text-accent transition-colors duration-300" />}
-                  {service.id === 'individual' && <User className="h-7 w-7 text-primary group-hover:text-accent transition-colors duration-300" />}
+                  {service.id === 'datacenter' && <Database className="h-7 w-7 text-primary group-hover:text-accent transition-colors duration-300" />}
                 </div>
                 <h3 className="font-heading text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
@@ -357,7 +358,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Call to action */}
       <section className="section-padding bg-gray-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 opacity-50">
@@ -366,22 +367,7 @@ const Home = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wider mb-4">TESTIMONIALS</span>
-            <h2 className="heading-lg gradient-text mb-4">What Our Clients Say</h2>
-            <p className="max-w-2xl mx-auto text-gray-600 text-lg">
-              Hear from our satisfied clients about their experience working with Sai Vinayaka.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map(testimonial => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-            ))}
-          </div>
-          
-          {/* Call to action */}
-          <div className="mt-20 text-center">
+          <div className="mt-8 text-center">
             <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-primary to-primary-dark text-white shadow-xl">
               <h3 className="text-2xl font-bold mb-4">Ready to work with us?</h3>
               <p className="mb-6 text-white/90">Contact us today to discuss your heavy equipment erection needs.</p>

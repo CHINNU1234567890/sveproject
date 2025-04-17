@@ -164,65 +164,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 bg-neutral-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral-800 mb-4">Our Expert Team</h2>
-            <p className="max-w-2xl mx-auto text-neutral-600">
-              Meet the skilled professionals who make up Sai Vinayaka
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
-                alt="Team member" 
-                className="w-full h-64 object-cover object-center"
-              />
-              <div className="p-6">
-                <h3 className="font-heading text-xl font-bold mb-1">Rajiv Mehta</h3>
-                <p className="text-accent font-medium mb-4">Founder & Technical Director</p>
-                <p className="text-neutral-600">
-                  With over 15 years of experience in industrial equipment erection across various industries.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img 
-                src="https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
-                alt="Team member" 
-                className="w-full h-64 object-cover object-center"
-              />
-              <div className="p-6">
-                <h3 className="font-heading text-xl font-bold mb-1">Anita Patel</h3>
-                <p className="text-accent font-medium mb-4">Operations Manager</p>
-                <p className="text-neutral-600">
-                  Specializes in project management and ensuring smooth workflow for all equipment erection projects.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <img 
-                src="https://images.unsplash.com/photo-1563237023-b1e970526dcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
-                alt="Team member" 
-                className="w-full h-64 object-cover object-center"
-              />
-              <div className="p-6">
-                <h3 className="font-heading text-xl font-bold mb-1">Vikram Singh</h3>
-                <p className="text-accent font-medium mb-4">Lead Technical Engineer</p>
-                <p className="text-neutral-600">
-                  Expert in complex equipment erection with particular focus on precision machinery.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
