@@ -112,7 +112,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Our Location</h4>
-                    <p className="text-neutral-600">123 Industrial Area, Bangalore, Karnataka, India - 560001</p>
+                    <p className="text-neutral-600">5-3-171/22, RP ROAD, JEERA, SECUNDERABAD-500003</p>
                   </div>
                 </div>
                 
@@ -292,14 +292,14 @@ const ContactPage = () => {
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl font-bold text-neutral-800 mb-4">Our Location</h2>
             <p className="max-w-2xl mx-auto text-neutral-600">
-              Visit our office or get in touch for on-site inspections and consultations
+              5-3-171/22, RP ROAD, JEERA, SECUNDERABAD-500003
             </p>
           </div>
           
           <div className="bg-white p-4 rounded-lg shadow-md">
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden h-[400px]">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9901012861003!2d77.5945627!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5731247816126!2d78.49882000000001!3d17.435135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb999b5c0ca379%3A0x645659c1ffd5d30c!2sSecunderabad%2C%20Telangana%20500003!5e0!3m2!1sen!2sin!4v1713449279644!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
