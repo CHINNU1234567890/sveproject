@@ -104,3 +104,23 @@ export const sendConfirmationEmail = async (data: EmailData): Promise<boolean> =
     return false;
   }
 };
+
+// Function to send a test email
+export const sendTestEmail = async (receiverEmail: string): Promise<boolean> => {
+  try {
+    const mailOptions = {
+      from: process.env.EMAIL_USER || '',
+      to: receiverEmail,
+      subject: 'Test Email - Sai Vinayaka Enterprises',
+      text: 'This is test mail',
+      html: '<p>This is test mail</p>'
+    };
+
+    const result = await transporter.sendMail(mailOptions);
+    console.log('Test email sent:', result.response);
+    return true;
+  } catch (error) {
+    console.error('Error sending test email:', error);
+    return false;
+  }
+};

@@ -4,7 +4,7 @@ import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
 import { ZodError } from "zod";
-import { sendNotificationEmail, sendConfirmationEmail } from "./emailService";
+import { sendNotificationEmail, sendConfirmationEmail, sendTestEmail } from "./emailService";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Handle contact form submissions
@@ -70,6 +70,40 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({
         success: false,
         message: "Failed to retrieve contacts"
+      });
+    }
+  });
+  
+  // Test email route (temporary, for testing only)
+  app.get("/api/test-email", async (req: Request, res: Response) => {
+    try {
+      const email = req.query.email as string;
+      
+      if (!email) {
+        return res.status(400).json({
+          success: false,
+          message: "Email parameter is required"
+        });
+      }
+      
+      const result = await sendTestEmail(email);
+      
+      if (result) {
+        res.status(200).json({
+          success: true,
+          message: "Test email sent successfully"
+        });
+      } else {
+        res.status(500).json({
+          success: false,
+          message: "Failed to send test email"
+        });
+      }
+    } catch (error) {
+      console.error("Error sending test email:", error);
+      res.status(500).json({
+        success: false,
+        message: error instanceof Error ? error.message : "An unexpected error occurred"
       });
     }
   });
