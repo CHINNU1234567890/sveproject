@@ -122,8 +122,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Call Us</h4>
-                    <p className="text-neutral-600">+91 9876543210</p>
-                    <p className="text-neutral-600">+91 8765432109</p>
+                    <p className="text-neutral-600">+91-9550222151</p>
                   </div>
                 </div>
                 
@@ -133,28 +132,26 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Email Us</h4>
-                    <p className="text-neutral-600">info@saivinayaka.com</p>
-                    <p className="text-neutral-600">support@saivinayaka.com</p>
+                    <p className="text-neutral-600">saivinayakaenterprises13@gmail.com</p>
                   </div>
                 </div>
               </div>
               
               <div className="flex space-x-4">
-                <a href="#" className="h-10 w-10 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center transition duration-300">
+                <a href="https://wa.me/919550222151" className="h-10 w-10 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center transition duration-300">
                   <svg className="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    <path d="M 17.6 6.2 C 16.2 4.8 14.2 4 12.1 4 C 7.9 4 4.6 7.3 4.6 11.5 C 4.6 13.1 5 14.6 5.8 16 L 4.5 19.5 L 8.1 18.2 C 9.4 18.9 10.7 19.2 12.1 19.2 C 16.3 19.2 19.6 15.9 19.6 11.7 C 19.6 9.5 18.9 7.6 17.6 6.2 M 12.1 17.9 C 10.9 17.9 9.6 17.6 8.5 17 L 8.2 16.8 L 6 17.6 L 6.8 15.5 L 6.6 15.2 C 5.9 14.1 5.6 12.8 5.6 11.5 C 5.6 8 8.4 5.2 12 5.2 C 13.8 5.2 15.4 5.9 16.6 7.1 C 17.8 8.3 18.4 9.9 18.4 11.7 C 18.5 15.2 15.6 17.9 12.1 17.9 M 15.6 13.2 C 15.4 13.1 14.1 12.5 14 12.5 C 13.8 12.4 13.7 12.4 13.5 12.6 C 13.4 12.8 13 13.3 12.9 13.4 C 12.8 13.6 12.6 13.6 12.4 13.5 C 11.3 12.9 10.6 12.4 9.9 11.2 C 9.7 10.9 10 10.9 10.3 10.2 C 10.4 10.1 10.3 9.9 10.3 9.8 C 10.2 9.7 9.7 8.4 9.5 8 C 9.3 7.6 9.1 7.6 9 7.6 C 8.9 7.6 8.7 7.6 8.6 7.6 C 8.4 7.6 8.1 7.7 7.9 7.9 C 7.7 8.1 7 8.7 7 10 C 7 11.3 7.9 12.5 8 12.7 C 8.1 12.8 9.7 15.4 12.2 16.5 C 14.1 17.3 14.7 17.2 15.4 17.1 C 15.8 17 16.8 16.5 17 16 C 17.2 15.5 17.2 15.1 17.1 15 C 17 14.9 16.8 14.9 15.6 13.2 Z" />
                   </svg>
                 </a>
-                <a href="#" className="h-10 w-10 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center transition duration-300">
+                <a href="tel:+919550222151" className="h-10 w-10 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center transition duration-300">
                   <svg className="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
                 </a>
-                <a href="#" className="h-10 w-10 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center transition duration-300">
+                <a href="mailto:saivinayakaenterprises13@gmail.com" className="h-10 w-10 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center transition duration-300">
                   <svg className="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect x="2" y="9" width="4" height="12"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
                   </svg>
                 </a>
               </div>
