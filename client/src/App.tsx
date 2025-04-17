@@ -10,6 +10,8 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 import NotFound from "./pages/not-found";
 
 function Router() {
@@ -23,6 +25,8 @@ function Router() {
           <Route path="/about" component={About} />
           <Route path="/projects" component={Projects} />
           <Route path="/contact" component={Contact} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
         </Switch>
       </main>

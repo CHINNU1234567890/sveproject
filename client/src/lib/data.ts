@@ -165,3 +165,87 @@ export const serviceOptions = [
   { value: "relocation", label: "Equipment Relocation" },
   { value: "other", label: "Other Services" }
 ];
+
+// Blog Posts
+export const blogPosts = [
+  {
+    id: "1",
+    title: "Safety Best Practices for Heavy Equipment Erection in Industrial Settings",
+    slug: "safety-best-practices-heavy-equipment-erection",
+    excerpt: "Explore the essential safety protocols and best practices that should be followed during industrial equipment erection to ensure worker safety and project success.",
+    content: `<p>Safety is paramount in any heavy equipment erection project. This article outlines the critical safety measures that should be implemented to protect workers and ensure successful equipment installation.</p>
+              <h2>Pre-erection Safety Planning</h2>
+              <p>Before beginning any equipment erection, a comprehensive safety plan should be developed. This includes site assessment, identifying potential hazards, and establishing emergency procedures.</p>
+              <h2>Personal Protective Equipment (PPE)</h2>
+              <p>Workers must wear appropriate PPE at all times, including hard hats, safety glasses, high-visibility clothing, steel-toed boots, and gloves. Specialized PPE may be required for specific tasks.</p>
+              <h2>Equipment Inspection</h2>
+              <p>All lifting equipment, tools, and machinery must be thoroughly inspected before use. Any damaged or worn equipment should be immediately removed from service and replaced.</p>
+              <h2>Communication Protocols</h2>
+              <p>Clear communication channels must be established between all team members. This includes using standardized hand signals, radio communication, and regular safety briefings.</p>
+              <h2>Load Calculation and Management</h2>
+              <p>Accurate load calculations are essential before attempting to lift any heavy equipment. Never exceed the rated capacity of lifting equipment, and always account for dynamic forces.</p>
+              <h2>Conclusion</h2>
+              <p>By implementing these safety best practices, equipment erection projects can be completed efficiently without compromising worker safety or equipment integrity.</p>`,
+    imageUrl: "/assets/images/colleagues-safety-equipment-working.jpg",
+    date: "April 15, 2025",
+    readTime: 7,
+    tags: ["Safety", "Industrial", "Best Practices"],
+    author: {
+      name: "Rajesh Kumar",
+      role: "Safety Manager",
+      avatarUrl: "https://randomuser.me/api/portraits/men/32.jpg"
+    }
+  },
+  {
+    id: "2",
+    title: "The Impact of Proper Equipment Erection on Operational Efficiency",
+    slug: "impact-proper-equipment-erection-efficiency",
+    excerpt: "Learn how properly executed equipment erection directly influences the operational efficiency and lifespan of industrial machinery.",
+    content: `<p>The way equipment is erected has a direct and lasting impact on its performance, efficiency, and longevity. This article explores the relationship between professional erection practices and operational outcomes.</p>
+              <h2>Alignment and Calibration</h2>
+              <p>Proper alignment during erection is crucial for equipment performance. Even minor misalignments can lead to increased vibration, accelerated wear, and higher energy consumption.</p>
+              <h2>Foundation and Mounting</h2>
+              <p>The foundation and mounting systems must be appropriately designed and constructed to support the equipment's weight, absorb vibrations, and withstand operational forces.</p>
+              <h2>Precision in Connection Points</h2>
+              <p>Connection points between equipment components must be precisely fitted. This includes electrical connections, hydraulic systems, and mechanical interfaces.</p>
+              <h2>Testing and Commissioning</h2>
+              <p>Comprehensive testing after erection helps identify and resolve issues before full operation begins, preventing costly downtime and repairs later.</p>
+              <h2>Conclusion</h2>
+              <p>Investing in professional equipment erection services pays dividends through improved operational efficiency, reduced maintenance costs, and extended equipment lifespan.</p>`,
+    imageUrl: "/assets/images/site-image-1.jpg",
+    date: "April 10, 2025",
+    readTime: 6,
+    tags: ["Efficiency", "Maintenance", "Operations"],
+    author: {
+      name: "Priya Sharma",
+      role: "Operations Director",
+      avatarUrl: "https://randomuser.me/api/portraits/women/44.jpg"
+    }
+  },
+  {
+    id: "3",
+    title: "Specialized Approaches for Medical Equipment Erection in Hospitals",
+    slug: "specialized-approaches-medical-equipment-erection",
+    excerpt: "Discover the unique considerations and methodologies required when erecting sensitive medical equipment in healthcare environments.",
+    content: `<p>Medical equipment erection requires specialized approaches that differ significantly from industrial equipment installation. This article outlines the critical factors to consider when working in healthcare environments.</p>
+              <h2>Sterile Environment Maintenance</h2>
+              <p>Maintaining sterile conditions during medical equipment erection is crucial. This includes using specialized cleaning protocols, proper attire, and controlled access to installation areas.</p>
+              <h2>Infrastructure Integration</h2>
+              <p>Medical equipment often needs to integrate with existing hospital infrastructure, including electrical systems, water supply, medical gas systems, and data networks.</p>
+              <h2>Regulatory Compliance</h2>
+              <p>Medical equipment installation must comply with stringent healthcare regulations and standards. Documentation and validation are essential components of the erection process.</p>
+              <h2>Minimal Disruption</h2>
+              <p>Equipment erection in hospitals must be planned to minimize disruption to patient care. This often requires working during off-hours and implementing phased installation approaches.</p>
+              <h2>Conclusion</h2>
+              <p>The erection of medical equipment requires specialized knowledge and approaches to ensure both proper functionality and compliance with healthcare standards and patient safety requirements.</p>`,
+    imageUrl: "/assets/images/site-image-3.jpg",
+    date: "March 28, 2025",
+    readTime: 8,
+    tags: ["Healthcare", "Medical Equipment", "Compliance"],
+    author: {
+      name: "Dr. Suresh Patel",
+      role: "Medical Technology Advisor",
+      avatarUrl: "https://randomuser.me/api/portraits/men/68.jpg"
+    }
+  }
+];

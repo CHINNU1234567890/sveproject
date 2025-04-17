@@ -70,6 +70,9 @@ const Footer = () => {
                 <FooterLink href="/projects" label="Projects" />
               </li>
               <li>
+                <FooterLink href="/blog" label="Blog" />
+              </li>
+              <li>
                 <FooterLink href="/contact" label="Contact" />
               </li>
             </ul>

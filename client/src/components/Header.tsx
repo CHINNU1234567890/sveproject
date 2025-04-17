@@ -52,6 +52,7 @@ const Header = () => {
           <NavLink to="/services" label="Services" active={isActive("/services")} />
           <NavLink to="/about" label="About" active={isActive("/about")} />
           <NavLink to="/projects" label="Projects" active={isActive("/projects")} />
+          <NavLink to="/blog" label="Blog" active={isActive("/blog")} />
           <NavLink to="/contact" label="Contact" active={isActive("/contact")} />
         </nav>
         
@@ -92,6 +93,9 @@ const Header = () => {
               </div>
               <div className="py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors">
                 <NavLink to="/projects" label="Projects" active={isActive("/projects")} />
+              </div>
+              <div className="py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors">
+                <NavLink to="/blog" label="Blog" active={isActive("/blog")} />
               </div>
               <div className="py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors">
                 <NavLink to="/contact" label="Contact" active={isActive("/contact")} />
