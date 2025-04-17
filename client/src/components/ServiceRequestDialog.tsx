@@ -197,17 +197,9 @@ const ServiceRequestDialog: React.FC<ServiceRequestDialogProps> = ({
             />
             
             <DialogFooter className="pt-4">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => onOpenChange(false)}
-                className="w-full sm:w-auto"
-              >
-                Cancel
-              </Button>
               <Button 
                 type="submit" 
-                className="w-full sm:w-auto bg-primary hover:bg-primary/90"
+                className="w-full bg-primary hover:bg-primary/90"
                 disabled={form.formState.isSubmitting}
               >
                 {form.formState.isSubmitting ? 'Submitting...' : 'Submit Request'}

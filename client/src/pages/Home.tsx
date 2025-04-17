@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle, Omega, Factory, Hospital, User, Building, Data
 import { Button } from "@/components/ui/button";
 import { serviceHighlights, projects } from "../lib/data";
 import ProjectCard from "../components/ProjectCard";
+import { useServiceRequest } from "../contexts/ServiceRequestContext";
 
 const featuredCards = [
   {
@@ -50,6 +51,7 @@ const clientTypes = [
 const Home = () => {
   const [activeFeaturedCard, setActiveFeaturedCard] = useState(0);
   const [activeClientType, setActiveClientType] = useState(0);
+  const { openServiceRequest } = useServiceRequest();
 
   // Change featured card every 5 seconds
   useEffect(() => {
@@ -147,11 +149,13 @@ const Home = () => {
                     </span>
                   </Button>
                 </Link>
-                <Link href="/contact">
-                  <Button variant="outline" className="glass-effect text-white hover:bg-white/20 text-lg font-medium border-white/20 px-6 py-3">
-                    Contact Us
-                  </Button>
-                </Link>
+                <Button 
+                  variant="outline" 
+                  className="glass-effect text-white hover:bg-white/20 text-lg font-medium border-white/20 px-6 py-3"
+                  onClick={() => openServiceRequest()}
+                >
+                  Request Service
+                </Button>
               </div>
             </div>
             
