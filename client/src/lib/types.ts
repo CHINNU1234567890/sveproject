@@ -32,3 +32,20 @@ export interface ContactFormData {
   service: string;
   message: string;
 }
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  imageUrl: string;
+  date: string;
+  readTime: number;
+  tags: string[];
+  author: {
+    name: string;
+    role: string;
+    avatarUrl: string;
+  };
+}

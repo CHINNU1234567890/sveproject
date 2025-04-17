@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saivinayakaenterprises.com/sitemap.xml
+
+# Disallow certain paths that might be sensitive or not relevant
+Disallow: /terms
+Disallow: /privacy

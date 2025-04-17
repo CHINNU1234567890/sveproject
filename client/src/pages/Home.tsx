@@ -355,6 +355,73 @@ const Home = () => {
         </div>
       </section>
 
+      {/* FAQ Section - SEO Optimized */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wider mb-4">FAQ</span>
+            <h2 className="heading-lg gradient-text mb-4">Frequently Asked Questions</h2>
+            <p className="max-w-2xl mx-auto text-gray-600 text-lg">
+              Common questions about our heavy equipment erection services
+            </p>
+          </div>
+          
+          <div className="max-w-3xl mx-auto">
+            <div className="space-y-6">
+              {/* FAQ Item 1 */}
+              <div className="bg-gray-50 rounded-lg p-6 border border-gray-100 shadow-sm" itemScope itemType="https://schema.org/Question">
+                <h3 className="text-xl font-bold text-neutral-800 mb-3" itemProp="name">What types of equipment erection services does Sai Vinayaka Enterprises provide?</h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-600" itemProp="text">
+                    Sai Vinayaka Enterprises provides comprehensive heavy equipment erection services for various industries including manufacturing facilities, hospitals, data centers, and individual businesses. Our services include erection of industrial machinery, medical equipment, manufacturing systems, data center infrastructure, and specialized equipment for individual business needs.
+                  </p>
+                </div>
+              </div>
+              
+              {/* FAQ Item 2 */}
+              <div className="bg-gray-50 rounded-lg p-6 border border-gray-100 shadow-sm" itemScope itemType="https://schema.org/Question">
+                <h3 className="text-xl font-bold text-neutral-800 mb-3" itemProp="name">How long has Sai Vinayaka Enterprises been in the equipment erection business?</h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-600" itemProp="text">
+                    Established in 2022, Sai Vinayaka Enterprises has quickly built a strong reputation in the heavy equipment erection industry. Despite being relatively new, our founder brings over 15 years of experience in industrial equipment erection, ensuring we deliver professional and expert services to all our clients.
+                  </p>
+                </div>
+              </div>
+              
+              {/* FAQ Item 3 */}
+              <div className="bg-gray-50 rounded-lg p-6 border border-gray-100 shadow-sm" itemScope itemType="https://schema.org/Question">
+                <h3 className="text-xl font-bold text-neutral-800 mb-3" itemProp="name">What are your service hours for equipment erection?</h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-600" itemProp="text">
+                    We provide 24/7 service availability, 365 days a year. We understand that equipment erection needs can be urgent and time-sensitive, which is why our team is always ready to respond to your requirements at any time, ensuring minimal disruption to your operations.
+                  </p>
+                </div>
+              </div>
+              
+              {/* FAQ Item 4 */}
+              <div className="bg-gray-50 rounded-lg p-6 border border-gray-100 shadow-sm" itemScope itemType="https://schema.org/Question">
+                <h3 className="text-xl font-bold text-neutral-800 mb-3" itemProp="name">What safety standards do you follow during equipment erection?</h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-600" itemProp="text">
+                    Safety is our top priority at Sai Vinayaka Enterprises. We strictly adhere to industry safety standards and protocols during all equipment erection projects. Our team is trained in the latest safety procedures, uses proper personal protective equipment, follows manufacturer guidelines, and ensures all safety checks are completed before, during, and after equipment erection.
+                  </p>
+                </div>
+              </div>
+              
+              {/* FAQ Item 5 */}
+              <div className="bg-gray-50 rounded-lg p-6 border border-gray-100 shadow-sm" itemScope itemType="https://schema.org/Question">
+                <h3 className="text-xl font-bold text-neutral-800 mb-3" itemProp="name">How can I request a quote for equipment erection services?</h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-600" itemProp="text">
+                    You can request a quote by contacting us through our website's contact form, calling us at +91-9550222151, or emailing us at saivinayakaenterprises13@gmail.com. Please provide details about your equipment, location, and specific requirements to help us provide an accurate quote. We aim to respond to all quote requests within 24 hours.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to action */}
       <section className="section-padding bg-gray-50 relative overflow-hidden">
         {/* Background decorative elements */}
