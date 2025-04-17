@@ -11,7 +11,7 @@ const featuredCards = [
     id: 'manufacturing',
     title: 'Manufacturing Equipment Setup',
     description: 'Installation and calibration of heavy machinery for manufacturing plants with precision and safety.',
-    image: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80',
+    image: '/assets/images/site-image-1.jpg',
     tags: ['Factory Setup', 'Expert Team', 'Certified'],
     icon: <Factory className="h-5 w-5 text-accent" />
   },
@@ -19,7 +19,7 @@ const featuredCards = [
     id: 'medical',
     title: 'Medical Equipment Installation',
     description: 'Specialized setup of sensitive medical machinery for hospitals with strict standards compliance.',
-    image: 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80',
+    image: '/assets/images/site-image-2.jpg',
     tags: ['Healthcare', 'Precision', 'Sterilized'],
     icon: <Hospital className="h-5 w-5 text-accent" />
   },
@@ -27,7 +27,7 @@ const featuredCards = [
     id: 'construction',
     title: 'Construction Equipment Erection',
     description: 'Setup of heavy-duty construction equipment and machinery for building projects.',
-    image: 'https://images.unsplash.com/photo-1581094494280-274e2cca8b4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80',
+    image: '/assets/images/site-image-3.jpg',
     tags: ['Safety First', 'On-Site', 'Licensed'],
     icon: <Building className="h-5 w-5 text-accent" />
   },
@@ -35,7 +35,7 @@ const featuredCards = [
     id: 'individual',
     title: 'Small Business Equipment',
     description: 'Custom installation solutions for small businesses and individual equipment users.',
-    image: 'https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80',
+    image: '/assets/images/site-image-4.jpg',
     tags: ['Custom Solutions', 'Affordable', 'Support'],
     icon: <User className="h-5 w-5 text-accent" />
   }
@@ -77,7 +77,7 @@ const Home = () => {
         id="home" 
         className="relative text-white overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(var(--primary-rgb), 0.85), rgba(var(--primary-dark-rgb), 0.95)), url('https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&h=800&q=80')`,
+          backgroundImage: `linear-gradient(to right, rgba(var(--primary-rgb), 0.85), rgba(var(--primary-dark-rgb), 0.95)), url('/assets/images/site-image-5.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -93,7 +93,20 @@ const Home = () => {
                 ESTABLISHED 2022
               </span>
               <h1 className="heading-xl mb-6 leading-tight">
-                <span className="text-white">Professional</span> <span className="text-accent font-extrabold">Heavy Equipment</span> <span className="text-white">Erection Services</span>
+                <span className="text-white">Professional</span> <span className="text-accent font-extrabold">Heavy Equipment</span> <span className="text-white">Erection Services for</span>
+                <div className="h-12 md:h-16 overflow-hidden mt-1">
+                  <span 
+                    className="text-accent font-extrabold block transition-all duration-300"
+                    style={{ 
+                      transform: `translateY(-${activeClientType * 100}%)`,
+                      opacity: 1
+                    }}
+                  >
+                    {clientTypes.map((type, index) => (
+                      <span key={index} className="block h-12 md:h-16">{type}</span>
+                    ))}
+                  </span>
+                </div>
               </h1>
               <p className="text-xl mb-6 text-white/90 font-light max-w-2xl leading-relaxed">
                 Industrial-grade installation solutions for:
@@ -301,7 +314,7 @@ const Home = () => {
             <div className="relative">
               <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-white/10">
                 <img 
-                  src="https://images.unsplash.com/photo-1478486982180-2de2fafa19f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
+                  src="/assets/images/site-image-2.jpg" 
                   alt="Heavy equipment installation team" 
                   className="w-full h-auto"
                 />
