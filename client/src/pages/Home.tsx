@@ -93,15 +93,16 @@ const Home = () => {
               </span>
               <h1 className="heading-xl mb-6 leading-tight">
                 <span className="text-white">Professional</span> <span className="text-accent font-extrabold">Heavy Equipment</span> <span className="text-white">Erection Services for</span>
-                <div className="h-12 md:h-16 overflow-hidden mt-1 relative">
-                  <div 
-                    className="absolute inset-0 text-accent font-extrabold transition-transform duration-500 ease-in-out"
-                    style={{ transform: `translateY(-${activeClientType * 100}%)` }}
-                  >
-                    {clientTypes.map((type, index) => (
-                      <div key={index} className="h-12 md:h-16 flex items-center">{type}</div>
-                    ))}
-                  </div>
+                <div className="h-12 md:h-16 mt-1 relative">
+                  {clientTypes.map((type, index) => (
+                    <div 
+                      key={index} 
+                      className="absolute inset-0 text-accent font-extrabold transition-opacity duration-300"
+                      style={{ opacity: index === activeClientType ? 1 : 0 }}
+                    >
+                      {type}
+                    </div>
+                  ))}
                 </div>
               </h1>
               <p className="text-xl mb-6 text-white/90 font-light max-w-2xl leading-relaxed">
