@@ -43,7 +43,7 @@ const Services = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="relative">
               <div className="bg-white rounded-lg border border-neutral-200 p-6 shadow-sm">
                 <div className="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full mb-4 font-bold text-xl">1</div>
@@ -62,20 +62,11 @@ const Services = () => {
               <div className="hidden lg:block absolute -right-4 top-10 w-8 h-2 bg-primary"></div>
             </div>
             
-            <div className="relative">
+            <div>
               <div className="bg-white rounded-lg border border-neutral-200 p-6 shadow-sm">
                 <div className="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full mb-4 font-bold text-xl">3</div>
                 <h3 className="font-heading text-xl font-bold mb-2">Equipment Erection</h3>
                 <p className="text-neutral-600">Our team carefully erects the equipment according to manufacturer specifications and industry standards.</p>
-              </div>
-              <div className="hidden lg:block absolute -right-4 top-10 w-8 h-2 bg-primary"></div>
-            </div>
-            
-            <div>
-              <div className="bg-white rounded-lg border border-neutral-200 p-6 shadow-sm">
-                <div className="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full mb-4 font-bold text-xl">4</div>
-                <h3 className="font-heading text-xl font-bold mb-2">Testing & Handover</h3>
-                <p className="text-neutral-600">We perform comprehensive testing, calibration, and provide training before final handover of the equipment.</p>
               </div>
             </div>
           </div>

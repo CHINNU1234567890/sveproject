@@ -104,28 +104,21 @@ const Footer = () => {
               <li className="flex items-center">
                 <Clock className="h-4 w-4 mr-2 text-accent" />
                 <div className="flex justify-between w-full">
-                  <span>Monday - Friday:</span>
-                  <span className="font-medium">8:00 AM - 6:00 PM</span>
+                  <span>Service Availability:</span>
+                  <span className="font-medium">24/7</span>
                 </div>
               </li>
               <li className="flex items-center">
                 <Clock className="h-4 w-4 mr-2 text-accent" />
                 <div className="flex justify-between w-full">
-                  <span>Saturday:</span>
-                  <span className="font-medium">9:00 AM - 4:00 PM</span>
-                </div>
-              </li>
-              <li className="flex items-center">
-                <Clock className="h-4 w-4 mr-2 text-accent" />
-                <div className="flex justify-between w-full">
-                  <span>Sunday:</span>
-                  <span className="font-medium">Closed</span>
+                  <span>Days of Operation:</span>
+                  <span className="font-medium">365 Days</span>
                 </div>
               </li>
             </ul>
             <div className="mt-6 p-3 rounded-lg bg-accent/10 border border-accent/20">
               <p className="text-sm text-white">
-                24/7 Emergency services available for critical equipment needs.
+                Our team is always ready to respond to your equipment erection needs around the clock.
               </p>
             </div>
           </div>
