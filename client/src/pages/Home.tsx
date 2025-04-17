@@ -95,11 +95,11 @@ const Home = () => {
               </span>
               <h1 className="heading-xl mb-6 leading-tight">
                 <span className="text-white">Professional</span> <span className="text-accent font-extrabold">Heavy Equipment</span> <span className="text-white">Erection Services for</span>
-                <div className="h-12 md:h-16 mt-1 relative" style={{ minHeight: '64px' }}>
+                <div className="h-16 md:h-20 mt-4 mb-4 relative" style={{ minHeight: '80px' }}>
                   {clientTypes.map((type, index) => (
                     <div 
                       key={index} 
-                      className="absolute inset-0 text-accent font-extrabold transition-opacity duration-300 flex items-center"
+                      className="absolute inset-0 text-accent font-extrabold transition-opacity duration-300 flex items-center px-2"
                       style={{ opacity: index === activeClientType ? 1 : 0 }}
                     >
                       {type}
