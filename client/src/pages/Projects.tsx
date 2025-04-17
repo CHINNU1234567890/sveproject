@@ -60,7 +60,7 @@ const Projects = () => {
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="font-heading text-2xl font-bold text-white mb-2">Industrial Equipment Erection</h3>
                 <p className="text-white text-opacity-90 mb-4">
-                  Heavy machinery setup for manufacturing plants
+                  Heavy machinery erection for manufacturing plants
                 </p>
                 <Link href="/services#industrial">
                   <span className="inline-block bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded text-sm font-medium cursor-pointer">
@@ -100,7 +100,7 @@ const Projects = () => {
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="font-heading text-2xl font-bold text-white mb-2">Manufacturing Systems</h3>
                 <p className="text-white text-opacity-90 mb-4">
-                  Assembly line and production equipment setup
+                  Assembly line and production equipment erection
                 </p>
                 <Link href="/services#manufacturing">
                   <span className="inline-block bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded text-sm font-medium cursor-pointer">

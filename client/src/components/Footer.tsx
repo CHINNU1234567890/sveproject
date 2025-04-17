@@ -38,7 +38,7 @@ const Footer = () => {
               <h3 className="font-heading font-bold text-2xl">SAI VINAYAKA</h3>
             </div>
             <p className="text-white mb-6 leading-relaxed">
-              Professional heavy equipment erection services since 2022. Delivering excellence in installation, setup, and calibration.
+              Professional heavy equipment erection services since 2022. Delivering excellence in erection, setup, and calibration.
             </p>
             <div className="flex space-x-3 mt-6">
               <a href="#" className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-accent/20 transition-colors duration-300 border border-white/5">

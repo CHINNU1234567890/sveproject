@@ -223,7 +223,7 @@ const Home = () => {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wider mb-4">OUR EXPERTISE</span>
             <h2 className="heading-lg gradient-text mb-4">Specialized Equipment Erection Services</h2>
             <p className="max-w-2xl mx-auto text-gray-600 text-lg">
-              We provide comprehensive solutions for installing and setting up heavy equipment across various industries.
+              We provide comprehensive solutions for erecting and setting up heavy equipment across various industries.
             </p>
           </div>
           

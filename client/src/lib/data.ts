@@ -35,7 +35,7 @@ export const serviceHighlights: Service[] = [
     features: [
       'Assembly line erection',
       'Robotic system positioning',
-      'Production equipment setup'
+      'Production equipment erection'
     ]
   },
   {
