@@ -91,17 +91,7 @@ const ServiceRequestDialog: React.FC<ServiceRequestDialogProps> = ({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <div className="flex items-center justify-between">
-            <DialogTitle className="text-2xl font-bold text-primary">Request Service</DialogTitle>
-            <Button
-              variant="ghost"
-              className="h-8 w-8 p-0"
-              onClick={() => onOpenChange(false)}
-            >
-              <X className="h-4 w-4" />
-              <span className="sr-only">Close</span>
-            </Button>
-          </div>
+          <DialogTitle className="text-2xl font-bold text-primary">Request Service</DialogTitle>
           <DialogDescription>
             Fill in your details and we'll get back to you with a customized solution.
           </DialogDescription>

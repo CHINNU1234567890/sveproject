@@ -304,14 +304,15 @@ const Home = () => {
                   <p className="text-white/90">Timely project completion with minimum operational disruption</p>
                 </div>
               </div>
-              <Link href="/contact">
-                <Button className="glass-effect hover:bg-white/20 text-white border-white/20 px-6 py-3 text-lg font-medium group">
-                  <span className="inline-flex items-center">
-                    Get in Touch 
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Button>
-              </Link>
+              <Button 
+                className="glass-effect hover:bg-white/20 text-white border-white/20 px-6 py-3 text-lg font-medium group"
+                onClick={() => openServiceRequest()}
+              >
+                <span className="inline-flex items-center">
+                  Request Service 
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Button>
             </div>
             
             <div className="relative">
@@ -440,11 +441,12 @@ const Home = () => {
             <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-primary to-primary-dark text-white shadow-xl">
               <h3 className="text-2xl font-bold mb-4">Ready to work with us?</h3>
               <p className="mb-6 text-white/90">Contact us today to discuss your heavy equipment erection needs.</p>
-              <Link href="/contact">
-                <Button className="glass-effect hover:bg-white/20 text-white border-white/20 px-6 py-3 text-lg font-medium">
-                  Contact Us Today
-                </Button>
-              </Link>
+              <Button 
+                className="glass-effect hover:bg-white/20 text-white border-white/20 px-6 py-3 text-lg font-medium"
+                onClick={() => openServiceRequest()}
+              >
+                Request Service Today
+              </Button>
             </div>
           </div>
         </div>
