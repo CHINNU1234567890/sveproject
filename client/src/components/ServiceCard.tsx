@@ -29,11 +29,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             </li>
           ))}
         </ul>
-        <Link href="/contact">
-          <a className="inline-flex items-center text-primary font-medium hover:text-primary-dark">
+        <Link href="/contact" className="inline-flex items-center text-primary font-medium hover:text-primary-dark">
             Request Service
             <ArrowRight className="ml-1 h-4 w-4" />
-          </a>
         </Link>
       </CardContent>
     </Card>
