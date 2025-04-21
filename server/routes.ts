@@ -7,6 +7,32 @@ import { ZodError } from "zod";
 import { sendNotificationEmail, sendConfirmationEmail, sendTestEmail } from "./emailService";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Add a super simple test endpoint to verify API functionality
+  app.get("/api/health", (req: Request, res: Response) => {
+    res.status(200).json({
+      status: "ok",
+      message: "API is working",
+      timestamp: new Date().toISOString()
+    });
+  });
+
+  // Add a minimal contact endpoint for testing
+  app.post("/api/contact-simple", (req: Request, res: Response) => {
+    try {
+      // Don't do any validation or storage, just echo back
+      res.status(200).json({
+        success: true,
+        message: "Request received successfully",
+        data: req.body
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: "Error processing request"
+      });
+    }
+  });
+  
   // Handle contact form submissions
   app.post("/api/contact", async (req: Request, res: Response) => {
     try {
