@@ -65,8 +65,22 @@ const ServiceRequestDialog: React.FC<ServiceRequestDialogProps> = ({
   // Submit form data
   const onSubmit = async (data: ServiceRequestFormValues) => {
     try {
-      // Send data to API
-      await apiRequest('POST', '/api/contact', data);
+      // Use the simplified contact endpoint for testing
+      console.log('Submitting to:', `${window.location.origin}/api/contact-simple`);
+      
+      // TESTING ONLY: First try the health endpoint to see if API is accessible
+      try {
+        const healthResponse = await fetch(`${window.location.origin}/api/health`);
+        const healthData = await healthResponse.json();
+        console.log('Health check response:', healthData);
+      } catch (healthError) {
+        console.error('Health check failed:', healthError);
+      }
+      
+      // Send data to simplified API endpoint
+      const response = await apiRequest('POST', '/api/contact-simple', data);
+      const responseData = await response.json();
+      console.log('Form submission response:', responseData);
       
       // Show success message
       toast({
@@ -79,9 +93,16 @@ const ServiceRequestDialog: React.FC<ServiceRequestDialogProps> = ({
       
     } catch (error) {
       console.error('Error submitting form:', error);
+      
+      // Detailed error message for better debugging
+      let errorMessage = "There was an error submitting your request. Please try again.";
+      if (error instanceof Error) {
+        errorMessage += ` (${error.message})`;
+      }
+      
       toast({
         title: "Submission Failed",
-        description: "There was an error submitting your request. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
     }
