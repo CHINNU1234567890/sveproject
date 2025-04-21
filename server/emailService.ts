@@ -1,28 +1,26 @@
 import nodemailer from 'nodemailer';
 import { Contact } from '../shared/schema';
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
 
-// Create a transporter using Gmail SMTP
-// Note: For production, you would use a proper email service provider or relay
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER || '',
-    pass: process.env.EMAIL_PASS || '',  // app password for Gmail
+// Instead of creating a persistent transporter at the module level,
+// we'll create a new one for each request to work better in serverless environments
+function createTransporter() {
+  // Check if required environment variables are set
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.error('Missing email configuration: EMAIL_USER or EMAIL_PASS environment variables are not set');
+    throw new Error('Email service is not properly configured');
   }
-});
 
-// Log email configuration status (without exposing secrets)
-console.log(`Email service configured with user: ${process.env.EMAIL_USER ? 'CONFIGURED' : 'MISSING'}`);
-console.log(`Email password: ${process.env.EMAIL_PASS ? 'CONFIGURED' : 'MISSING'}`);
-
-// Verify transporter configuration
-transporter.verify((error) => {
-  if (error) {
-    console.error('SMTP connection error:', error.message);
-  } else {
-    console.log('Email server is ready to send messages');
-  }
-});
+  // Create a transporter for this specific request with explicit SMTPTransport options
+  return nodemailer.createTransport({
+    // Explicitly cast to any to avoid TypeScript errors with the nodemailer types
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  } as any);
+}
 
 interface EmailData {
   name: string;
@@ -35,8 +33,11 @@ interface EmailData {
 // Function to send notification email to site owner
 export const sendNotificationEmail = async (data: EmailData): Promise<boolean> => {
   try {
+    // Create a fresh transporter for this request
+    const transporter = createTransporter();
+    
     const mailOptions = {
-      from: process.env.EMAIL_USER || '',
+      from: process.env.EMAIL_USER,
       to: 'saivinayakaenterprises13@gmail.com', // Company email
       subject: `New Service Request from ${data.name}`,
       html: `
@@ -53,6 +54,10 @@ export const sendNotificationEmail = async (data: EmailData): Promise<boolean> =
     return true;
   } catch (error) {
     console.error('Error sending notification email:', error);
+    if (error instanceof Error) {
+      console.error('Error details:', error.message);
+      if (error.stack) console.error('Stack trace:', error.stack);
+    }
     return false;
   }
 };
@@ -60,8 +65,11 @@ export const sendNotificationEmail = async (data: EmailData): Promise<boolean> =
 // Function to send confirmation email to client
 export const sendConfirmationEmail = async (data: EmailData): Promise<boolean> => {
   try {
+    // Create a fresh transporter for this request
+    const transporter = createTransporter();
+    
     const mailOptions = {
-      from: process.env.EMAIL_USER || '',
+      from: process.env.EMAIL_USER,
       to: data.email,
       subject: 'Your Service Request - Sai Vinayaka Enterprises',
       html: `
@@ -101,6 +109,10 @@ export const sendConfirmationEmail = async (data: EmailData): Promise<boolean> =
     return true;
   } catch (error) {
     console.error('Error sending confirmation email:', error);
+    if (error instanceof Error) {
+      console.error('Error details:', error.message);
+      if (error.stack) console.error('Stack trace:', error.stack);
+    }
     return false;
   }
 };
@@ -108,8 +120,11 @@ export const sendConfirmationEmail = async (data: EmailData): Promise<boolean> =
 // Function to send a test email
 export const sendTestEmail = async (receiverEmail: string): Promise<boolean> => {
   try {
+    // Create a fresh transporter for this request
+    const transporter = createTransporter();
+    
     const mailOptions = {
-      from: process.env.EMAIL_USER || '',
+      from: process.env.EMAIL_USER,
       to: receiverEmail,
       subject: 'Test Email - Sai Vinayaka Enterprises',
       text: 'This is test mail',
@@ -121,6 +136,10 @@ export const sendTestEmail = async (receiverEmail: string): Promise<boolean> => 
     return true;
   } catch (error) {
     console.error('Error sending test email:', error);
+    if (error instanceof Error) {
+      console.error('Error details:', error.message);
+      if (error.stack) console.error('Stack trace:', error.stack);
+    }
     return false;
   }
 };
