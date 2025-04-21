@@ -1,8 +1,19 @@
 import express, { type Request, Response, NextFunction } from "express";
+import cors from 'cors';
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+// Configure CORS for production
+const corsOptions = {
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://sveproject-ew8i.vercel.app', 'https://sveproject.vercel.app', 'https://saivinayakaenterprises.com', 'https://www.saivinayakaenterprises.com']
+    : 'http://localhost:5000',
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
