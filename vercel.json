@@ -16,7 +16,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/index.ts"
+      "dest": "server/index.ts"
     },
     {
       "src": "/(assets|images)/(.*)",
@@ -30,5 +30,8 @@
       "src": "/(.*)",
       "dest": "/dist/public/index.html"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
