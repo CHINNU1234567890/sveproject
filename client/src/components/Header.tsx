@@ -56,7 +56,7 @@ const Header = () => {
             </div>
             <div className="sm:ml-3">
               <h1 className="font-heading font-bold text-2xl gradient-text tracking-tight">
-                SAI VINAYAKA ENTERPRISES
+                Crazy VINAYAKA ENTERPRISES
               </h1>
               <p className="text-xs font-medium text-gray-600">
                 Heavy Equipment Erection Services
